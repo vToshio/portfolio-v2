@@ -14,10 +14,10 @@ const isMobile = computed(() => width.value < 768);
 <template>
     <header class="fixed top-0 z-100 w-full bg-neutral-100 shadow-md shadow-neutral-200">
         <nav class="flex mx-auto justify-between md:justify-around items-stretch">
-            <img class="w-25 py-2 px-4 md:px-2" :src="logo" alt="Logo Vinícius Toshio">
+            <img class="w-35 py-4 px-4 md:px-2" :src="logo" alt="Logo Vinícius Toshio">
             
             <div v-if="!isMobile" class="flex items-stretch gap-3">
-                <ul class="flex items-stretch text-xs font-light text-shadow-2xs">
+                <ul class="flex items-stretch text-base font-light text-shadow-2xs">
                     <li class="navbar-item">
                         sobre
                     </li>
@@ -36,13 +36,13 @@ const isMobile = computed(() => width.value < 768);
                 </ul>
 
                 <div class="flex items-stretch">
-                    <a class="flex items-center px-2 transition-colors duration-300 hover:bg-neutral-200 hover:cursor-pointer"
+                    <a class="navbar-item"
                        href="https://github.com/vToshio" rel="noopener noreferrer" target="_blank">
-                        <img class="w-6" :src="gh_icon" alt="Meu Github">
+                        <img class="w-8" :src="gh_icon" alt="Meu Github">
                     </a>
-                    <a class="flex items-center px-2 transition-colors duration-300  hover:bg-neutral-200 hover:cursor-pointer"
+                    <a class="navbar-item"
                        href="https://www.linkedin.com/in/vtoshio" rel="noopener noreferrer" target="_blank">
-                        <img class="w-6" :src="linkedin_icon" alt="Meu LinkedIn">
+                        <img class="w-8" :src="linkedin_icon" alt="Meu LinkedIn">
                     </a>
                 </div>
             </div>
