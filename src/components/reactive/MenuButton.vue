@@ -9,12 +9,12 @@ const clicked = ref(false)
 </script>
 
 <template>
-    <button @click="clicked = !clicked" class="cursor-pointer px-3 hover:bg-neutral-200">
+    <button @click="clicked = !clicked" class="cursor-pointer px-5 hover:bg-neutral-200">
         <img class="w-6" :src="menu_icon" alt="">
     </button>
 
     <template v-if="clicked">
-        <div class="fixed top-15 right-2 rounded-md bg-neutral-100 shadow-xl shadow-neutral-300">
+        <div class="fixed top-15 right-3 rounded-md bg-neutral-100 shadow-xl shadow-neutral-300">
             <ul class="flex flex-col justify-center text-base">
                 <li class="menu-item-top">
                     sobre
