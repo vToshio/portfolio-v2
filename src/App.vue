@@ -1,12 +1,11 @@
 <script setup>
-  import { ref } from 'vue';
-
+import AppNavbar from './components/shared/AppNavbar.vue';
 </script>
 
 <template>
-  <header></header>
+  <AppNavbar />
 
-  <main>
+  <main class="mx-5 my-12 min-h-screen">
     <RouterView />
   </main>
 
