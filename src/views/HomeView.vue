@@ -1,4 +1,7 @@
 <script setup>
+import ProjectCard from '@/components/projects/ProjectCard.vue';
+import AllProjectCard from '@/components/projects/AllProjectCard.vue';
+
 import placeholder from '@/assets/images/photo-placeholder.png';
 
 import python from '@/assets/svg/languages/python.svg';
@@ -39,7 +42,10 @@ import ai from '@/assets/svg/languages/ai-icon.svg';
   </section>
 
   <section id="about" class="max-w-6xl mx-auto mt-15 mb-20">
-    <h1 class="text-center text-4xl font-bold tracking-tight text-neutral-900">1. Sobre Mim</h1>
+    <h1 class="text-center text-4xl font-bold tracking-tight text-neutral-900">
+      <span class="text-indigo-500">1.</span> 
+      Sobre Mim
+    </h1>
     <hr class="mx-auto w-1/2 mt-3 mb-8">
 
     <div class="flex flex-col-reverse xl:flex-row justify-center w-full mt-10 gap-5">
@@ -54,7 +60,7 @@ import ai from '@/assets/svg/languages/ai-icon.svg';
       <img class="w-100 mx-auto xl:mx-0 xl:max-w-1/2 rounded-xl" :src="placeholder" alt="">
     </div>
     
-    <div class="mx-auto max-w-6xl px-6 py-12">
+    <div class="mx-auto max-w-6xl px-6 pt-12">
       <h2 class="text-center text-3xl font-bold tracking-tight text-neutral-900 mb-10">Habilidades</h2>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -91,6 +97,42 @@ import ai from '@/assets/svg/languages/ai-icon.svg';
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="projects" class="max-w-6xl mx-auto mt-15 mb-20">
+    <h1 class="text-center text-4xl font-bold tracking-tight text-neutral-900">
+      <span class="text-indigo-500">2.</span> 
+      Projetos
+    </h1>
+    <hr class="mx-auto w-1/2 mt-3 mb-8">
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 w-full px-5">
+      <ProjectCard class="col-span-1 lg:col-span-2"
+                   :year="2026"
+                   :project_name="'API de Pesquisa Híbrida'"
+                   :project_description="'Protótipo de API para recuperação inteligente de informações (TCC/FHO). Utiliza Elasticsearch e modelos de Linguagem Natural para realizar pesquisas híbridas, integrando busca semântica (vetorial) e busca por palavras-chave para identificar os trechos mais relevantes de um documento.'"
+                   :tags="['Python', 'FastAPI', 'API RESTful', 'SentenceTransformers', 'HuggingFace', 'Elasticsearch']"
+                   :github_url="'https://github.com/vToshio/hybrid-search-api'"/>
+      <ProjectCard class="col-span-1"
+                   :year="2026"
+                   :project_name="'Benchmarking de Modelos NLP'"
+                   :project_description="'Ferramenta desenvolvida para testar a eficiência computacional e de similaridade de palavras de modelos de geração de embeddings do HuggingFace.'"
+                   :tags="['Python', 'Django', 'JavaScript', 'Bootstrap']"
+                   :github_url="'https://github.com/vToshio/hf-embeddings-models'"/>
+      <ProjectCard class="col-span-1"
+                   :year="2025"
+                   :project_name="'Calculadora Beewatts'"
+                   :project_description="'Ferramenta para simular a economia e o investimento necessário para a instalação de energia solar com base no consumo do usuário.'"
+                   :tags="['Python', 'Django', 'JavaScript', 'Bootstrap']"
+                   :github_url="'https://github.com/vToshio/beewatts'"/>
+      <ProjectCard class="col-span-1"
+                   :year="2024"
+                   :project_name="'Sistema de Gestão de Estoque'"
+                   :project_description="'Aplicação Full-stack com API RESTful integrada e interface dinâmica (AJAX/Fetch). Gerencia produtos, clientes e vendas com foco em uma experiência de usuário dinâmica e modelagem de dados eficiente. '"
+                   :tags="['Python', 'Flask', 'JavaScript', 'Bootstrap']"
+                   :github_url="'https://github.com/vToshio/sistema-inventario-flask'"/>
+      <AllProjectCard />
     </div>
   </section>
 </template>
