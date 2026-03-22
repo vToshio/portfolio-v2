@@ -24,10 +24,10 @@ const isMobile = computed(() => width.value < 768);
                         sobre
                     </li>
                     <li class="navbar-item">
-                        experiência
+                        projetos
                     </li>
                     <li class="navbar-item">
-                        projetos
+                        experiência
                     </li>
                     <li class="navbar-item">
                         contato

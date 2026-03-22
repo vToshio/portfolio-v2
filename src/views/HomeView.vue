@@ -1,5 +1,23 @@
 <script setup>
 import placeholder from '@/assets/images/photo-placeholder.png';
+
+import python from '@/assets/svg/languages/python.svg';
+import javascript from '@/assets/svg/languages/javascript.svg';
+import ruby from '@/assets/svg/languages/ruby.svg';
+
+import rails from '@/assets/svg/languages/rails.svg';
+import vuejs from '@/assets/svg/languages/vuejs.svg';
+import fastapi from '@/assets/svg/languages/fastapi.svg';
+import flask from '@/assets/svg/languages/flask.svg';
+import tailwind from '@/assets/svg/languages/tailwindcss.svg';
+
+import vscode from '@/assets/svg/languages/vscode.svg';
+import postman from '@/assets/svg/languages/postman.svg';
+import git from '@/assets/svg/languages/git.svg';
+import docker from '@/assets/svg/languages/docker.svg';
+import fedora from '@/assets/svg/languages/fedora.svg';
+import github from '@/assets/svg/gh-icon.svg';
+import ai from '@/assets/svg/languages/ai-icon.svg';
 </script>
 
 <template>
@@ -11,32 +29,68 @@ import placeholder from '@/assets/images/photo-placeholder.png';
     <div class="absolute z-30 mask-radial-at-right mask-radial-from-5% mask-radial-to-60% bg-indigo-500/30 w-full h-full backdrop-blur-2xl"></div>
     <div class="z-50 text-center mx-auto max-w-1/2">
       <div class="flex flex-col">
-        <span class="font-light text-2xl text-nowrap text-shadow-2xs text-shadow-neutral-500">👋Olá! Me chamo</span>
-        <h1 class="text-5xl font-bold my-3 italic text-shadow-2xs text-shadow-neutral-500">Vinícius Toshio</h1>
+        <span class="font-light text-2xl text-nowrap text-shadow-2xs text-shadow-neutral-500">👋Opa! Prazer, sou</span>
+        <h1 class="text-6xl font-bold my-3 italic tracking-tight text-shadow-2xs text-shadow-neutral-500">Vinícius Toshio</h1>
       </div>
       <div class="flex items-center justify-center my-3 py-1.5 rounded-full bg-sky-500 shadow-xs shadow-neutral-500">
-        <span class="text-xs md:text-sm font-medium">Desenvolvedor Full-Stack</span>
+        <span class="text-sm md:text-base font-medium tracking-tight">Desenvolvedor Full-Stack</span>
       </div>
     </div>
   </section>
 
-  <section id="about" class="flex flex-col justify-center my-15">
-    <div class="text-center">
-      <h1 class="text-4xl font-semibold">1. Sobre Mim</h1>
-    </div>
+  <section id="about" class="max-w-6xl mx-auto mt-15 mb-20">
+    <h1 class="text-center text-4xl font-bold tracking-tight text-neutral-900">1. Sobre Mim</h1>
+    <hr class="mx-auto w-1/2 mt-3 mb-8">
 
-    <hr class="my-3 mx-auto w-1/2">
-
-    <div class="flex flex-col-reverse mt-10 gap-5 justify-center xl:flex-row mx-auto">
-      <div class="flex flex-col gap-2 text-justify mx-5 xl:mx-0 xl:max-w-1/3 px-5 py-3">
-        <p class="text-sm lg:text-base font-light">
+    <div class="flex flex-col-reverse xl:flex-row justify-center w-full mt-10 gap-5">
+      <div class="flex flex-col gap-2 text-justify px-5 mx-8 md:mx-auto md:max-w-3/4 xl:mx-0 xl:max-w-1/2">
+        <p class="text-base font-light">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet lacinia odio ut accumsan. Pellentesque convallis purus eget elit commodo auctor. Donec vestibulum eget nunc id bibendum. Suspendisse eu ligula erat. Vivamus fermentum purus urna, quis viverra nisi cursus in. Curabitur porttitor leo ut auctor suscipit. Vestibulum quis augue luctus ligula aliquet blandit. Aenean libero ipsum, mollis eget consectetur vel, consectetur ut urna. Vestibulum accumsan dignissim vestibulum. Pellentesque dapibus gravida augue quis viverra.
         </p>
-        <p class="text-sm lg:text-base font-light">
+        <p class="text-base font-light">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet lacinia odio ut accumsan. Pellentesque convallis purus eget elit commodo auctor. Donec vestibulum eget nunc id bibendum. Suspendisse eu ligula erat. Vivamus fermentum purus urna, quis viverra nisi cursus in. Curabitur porttitor leo ut auctor suscipit. Vestibulum quis augue luctus ligula aliquet blandit. Aenean libero ipsum, mollis eget consectetur vel, consectetur ut urna. Vestibulum accumsan dignissim vestibulum. Pellentesque dapibus gravida augue quis viverra.
         </p>
       </div>
       <img class="w-100 mx-auto xl:mx-0 xl:max-w-1/2 rounded-xl" :src="placeholder" alt="">
+    </div>
+    
+    <div class="mx-auto max-w-6xl px-6 py-12">
+      <h2 class="text-center text-3xl font-bold tracking-tight text-neutral-900 mb-10">Habilidades</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card">
+          <h3 class="text-sm uppercase tracking-widest text-gray-500 font-bold mb-6">Linguagens</h3>
+          <div class="flex flex-wrap justify-center gap-6">
+            <img class="skill-icon" :src="ruby" alt="Ruby">
+            <img class="skill-icon" :src="python" alt="Python">
+            <img class="skill-icon" :src="javascript" alt="JavaScript">
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="text-sm uppercase tracking-widest text-gray-500 font-bold mb-6">Frameworks</h3>
+          <div class="flex flex-wrap justify-center gap-6">
+            <img class="skill-icon" :src="rails" alt="Rails">
+            <img class="skill-icon" :src="flask" alt="Flask">
+            <img class="skill-icon" :src="fastapi" alt="FastAPI">
+            <img class="skill-icon" :src="vuejs" alt="Vue.js">
+            <img class="skill-icon" :src="tailwind" alt="TailwindCSS">
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="text-sm uppercase tracking-widest text-gray-500 font-bold mb-6">Ferramentas</h3>
+          <div class="flex flex-wrap justify-center gap-6">
+            <img class="skill-icon" :src="vscode" alt="VS Code">
+            <img class="skill-icon" :src="postman" alt="Postman">
+            <img class="skill-icon" :src="docker" alt="Docker">
+            <img class="skill-icon" :src="github" alt="GitHub">
+            <img class="skill-icon" :src="git" alt="Git">
+            <img class="skill-icon" :src="fedora" alt="Fedora">
+            <img class="skill-icon" :src="ai" alt="Inteligência Artificial">
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>

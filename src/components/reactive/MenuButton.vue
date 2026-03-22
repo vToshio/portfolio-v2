@@ -14,22 +14,22 @@ const clicked = ref(false)
     </button>
 
     <template v-if="clicked">
-        <div class="fixed top-15 right-3 rounded-md bg-neutral-100 shadow-xl shadow-neutral-300">
+        <div class="fixed top-15 right-3 rounded-md bg-neutral-100 shadow-md shadow-neutral-500">
             <ul class="flex flex-col justify-center text-base">
                 <li class="menu-item-top">
-                    sobre
+                    Sobre
                 </li>
                 <li class="menu-item">
-                    experiência
+                    Projetos
                 </li>
                 <li class="menu-item">
-                    projetos
+                    Experiência
                 </li>
                 <li class="menu-item">
-                    contato
+                    Contato
                 </li>
                 <li class="menu-item">
-                    currículo
+                    Currículo
                 </li>
                 <hr class="my-1 mx-2 text-neutral-800">
                 <li class="menu-item">
