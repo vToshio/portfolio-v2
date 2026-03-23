@@ -12,7 +12,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="border border-dotted rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-neutral-400/30 p-5">
+    <div class="flex flex-col justify-around border border-dotted rounded-md transition-all duration-300 hover:shadow-lg hover:shadow-neutral-400/30 p-5">
         <div class="flex justify-between">
             <h2 class="text-2xl font-bold tracking-tight mb-2">{{ project_name }}</h2>
             <span class="text-2xl font-light tracking-tight">{{ year }}</span>

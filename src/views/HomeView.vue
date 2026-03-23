@@ -118,7 +118,7 @@ import ai from '@/assets/svg/languages/ai-icon.svg';
                    :year="2026"
                    :project_name="'Benchmarking de Modelos NLP'"
                    :project_description="'Ferramenta desenvolvida para testar a eficiência computacional e de similaridade de palavras de modelos de geração de embeddings do HuggingFace.'"
-                   :tags="['Python', 'Django', 'JavaScript', 'Bootstrap']"
+                   :tags="['Python', 'HuggingFace', 'SentenceTransformers', 'NLP']"
                    :github_url="'https://github.com/vToshio/hf-embeddings-models'"/>
       <ProjectCard class="col-span-1"
                    :year="2025"
