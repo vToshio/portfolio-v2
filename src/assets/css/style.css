@@ -25,11 +25,11 @@
 }
 
 .card {
-    @apply bg-gray-50/50 border border-gray-100 rounded-3xl p-8 flex flex-col items-center hover:shadow-xl hover:shadow-neutral-300/50 transition-all duration-300
+    @apply bg-gray-50/50 border border-gray-100 rounded-3xl p-8 flex flex-col items-center shadow-md hover:shadow-xl hover:shadow-neutral-300/50 hover:scale-101 transition-all duration-300
 }
 
 .skill-icon {
-    @apply w-12 h-12 grayscale hover:grayscale-0 transition duration-300 object-contain
+    @apply w-12 h-12 lg:grayscale lg:hover:grayscale-0 transition duration-300 object-contain hover:scale-110
 }
 
 .tag {

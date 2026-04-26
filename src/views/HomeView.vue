@@ -1,6 +1,7 @@
 <script setup>
 import ProjectCard from '@/components/projects/ProjectCard.vue';
 import AllProjectCard from '@/components/projects/AllProjectCard.vue';
+import ExperienceCard from '@/components/experiences/ExperienceCard.vue';
 
 import placeholder from '@/assets/images/photo-placeholder.png';
 
@@ -21,6 +22,9 @@ import docker from '@/assets/svg/languages/docker.svg';
 import fedora from '@/assets/svg/languages/fedora.svg';
 import github from '@/assets/svg/gh-icon.svg';
 import ai from '@/assets/svg/languages/ai-icon.svg';
+
+import esl_logo from '@/assets/images/esl-color.png'
+import pref_an_logo from '@/assets/images/pref-artur-nogueira.png'
 </script>
 
 <template>
@@ -46,7 +50,7 @@ import ai from '@/assets/svg/languages/ai-icon.svg';
       <span class="text-indigo-500">1.</span> 
       Sobre Mim
     </h1>
-    <hr class="mx-auto w-1/2 mt-3 mb-8">
+    <hr class="mx-auto w-1/2 mt-3 mb-10">
 
     <div class="flex flex-col-reverse xl:flex-row justify-center w-full mt-10 gap-5">
       <div class="flex flex-col gap-2 text-justify px-5 mx-8 md:mx-auto md:max-w-3/4 xl:mx-0 xl:max-w-1/2">
@@ -105,35 +109,64 @@ import ai from '@/assets/svg/languages/ai-icon.svg';
       <span class="text-indigo-500">2.</span> 
       Projetos
     </h1>
-    <hr class="mx-auto w-1/2 mt-3 mb-8">
+    <hr class="mx-auto w-1/2 mt-3 mb-10">
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 w-full px-5">
-      <ProjectCard class="col-span-1 lg:col-span-2"
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 w-full px-5 group/opaque">
+      <ProjectCard class="col-span-1 lg:col-span-2 hover:opacity-100 hover:scale-101 group-hover/opaque:opacity-50"
                    :year="2026"
                    :project_name="'API de Pesquisa Híbrida'"
                    :project_description="'Protótipo de API para recuperação inteligente de informações (TCC/FHO). Utiliza Elasticsearch e modelos de Linguagem Natural para realizar pesquisas híbridas, integrando busca semântica (vetorial) e busca por palavras-chave para identificar os trechos mais relevantes de um documento.'"
                    :tags="['Python', 'FastAPI', 'API RESTful', 'SentenceTransformers', 'HuggingFace', 'Elasticsearch']"
                    :github_url="'https://github.com/vToshio/hybrid-search-api'"/>
-      <ProjectCard class="col-span-1"
+      <ProjectCard class="col-span-1 hover:opacity-100 group-hover/opaque:opacity-50 hover:scale-101"
                    :year="2026"
                    :project_name="'Benchmarking de Modelos NLP'"
                    :project_description="'Ferramenta desenvolvida para testar a eficiência computacional e de similaridade de palavras de modelos de geração de embeddings do HuggingFace.'"
                    :tags="['Python', 'HuggingFace', 'SentenceTransformers', 'NLP']"
                    :github_url="'https://github.com/vToshio/hf-embeddings-models'"/>
-      <ProjectCard class="col-span-1"
+      <ProjectCard class="col-span-1 hover:opacity-100 group-hover/opaque:opacity-50 hover:scale-101"
                    :year="2025"
                    :project_name="'Calculadora Beewatts'"
                    :project_description="'Ferramenta para simular a economia e o investimento necessário para a instalação de energia solar com base no consumo do usuário.'"
                    :tags="['Python', 'Django', 'JavaScript', 'Bootstrap']"
                    :github_url="'https://github.com/vToshio/beewatts'"/>
-      <ProjectCard class="col-span-1"
+      <ProjectCard class="col-span-1 hover:opacity-100 group-hover/opaque:opacity-50 hover:scale-101"
                    :year="2024"
                    :project_name="'Sistema de Gestão de Estoque'"
                    :project_description="'Aplicação Full-stack com API RESTful integrada e interface dinâmica (AJAX/Fetch). Gerencia produtos, clientes e vendas com foco em uma experiência de usuário dinâmica e modelagem de dados eficiente. '"
                    :tags="['Python', 'Flask', 'JavaScript', 'Bootstrap']"
                    :github_url="'https://github.com/vToshio/sistema-inventario-flask'"/>
-      <AllProjectCard />
+      <AllProjectCard class="hover:opacity-100 group-hover/opaque:opacity-50 hover:scale-101" />
+    </div>
+
+    <div id="experiences" class="max-w-6xl mx-auto mt-15 mb-20">
+      <h1 class="text-center text-4xl font-bold tracking-tight text-neutral-900">
+        <span class="text-indigo-500">3.</span> 
+        Experiências
+      </h1>
+      <hr class="mx-auto w-1/2 mt-3 mb-8">
+
+      <div class="flex flex-col gap-15">
+        <ExperienceCard :company="'ESL Sistemas'" :logo="esl_logo"
+                        :job_title="'Estagiário de Desenvolvimento Web'"
+                        :topics="[
+                          'Atuação no suporte técnico especializado níveis N1 e N2, solucionando incidentes diários e assegurando o cumprimento de acordos de nível de serviço (SLA).',
+                          'Desenvolvimento de funcionalidades para sistemas logísticos utilizando Ruby on Rails, com foco na aplicação de padrões de projeto e desenvolvimento da empresa e em conformidade com requisitos fiscais e de negócio.',
+                          'Otimização de 20% no tempo de entrega de demandas através da implementação de processos de Behavior-Driven Development (BDD).',
+                          'Gestão de fluxo de trabalho utilizando Kanban e colaboração ativa em cerimônias ágeis, contribuindo para o refinamento técnico de requisitos.',
+                        ]"
+                        :skills="['Ruby on Rails', 'VueJS', 'REST/RESTful', 'GraphQL']"
+                        :start="'2025'" :end="'Atual'" />
+        <ExperienceCard :company="'Prefeitura Municipal de Artur Nogueira'" :logo="pref_an_logo"
+                        :job_title="'Estagiário de TI'"
+                        :skills="['PowerShell', 'Bash', 'Python']"
+                        :topics="[
+                          'Automatização de tarefas operacionais recorrentes por meio de scripts em PowerShell e Bash, reduzindo o esforço manual da equipe e aumentando a produtividade.',
+                          'Manutenção preventiva e corretiva de infraestrutura de rede e hardware, garantindo a continuidade e estabilidade dos serviços públicos municipais.',
+                          'Providência de suporte técnico especializado para usuários internos, solucionando problemas de software e conectividade para múltiplos departamentos.'
+                        ]"
+                        :start="'2023'" :end="'2025'" />
+      </div>
     </div>
   </section>
 </template>
-
