@@ -16,18 +16,18 @@ import linkedin_icon from '@/assets/svg/linkedin-icon.svg';
       </div>
 
       <nav class="flex flex-wrap justify-center gap-8 text-[11px] uppercase tracking-[0.2em] font-bold">
-        <a href="#about" class="hover:text-indigo-500 transition-colors">
+        <RouterLink :to="{ path: '/', hash: '#about' }" class="hover:text-indigo-500 transition-colors">
             Sobre
-        </a>
-        <a href="#projects" class="hover:text-indigo-500 transition-colors">
+        </RouterLink>
+        <RouterLink :to="{ path: '/', hash: '#projects' }" class="hover:text-indigo-500 transition-colors">
             Projetos
-        </a>
-        <a href="#experiences" class="hover:text-indigo-500 transition-colors">
+        </RouterLink>
+        <RouterLink :to="{ path: '/', hash: '#experiences' }" class="hover:text-indigo-500 transition-colors">
             Experiências
-        </a>
-        <a href="" rel="noopenner noreferren" target="_blank" class="hover:text-indigo-500 transition-colors">
+        </RouterLink  >
+        <RouterLink to="/contact" rel="noopenner noreferren" target="_blank" class="hover:text-indigo-500 transition-colors">
             Contato
-        </a>
+        </RouterLink>
       </nav>
 
       <div class="flex gap-4 items-center">
