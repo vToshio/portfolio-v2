@@ -21,6 +21,10 @@ const props = defineProps({
         type: String,
         default: 'Empresa Teste'
     },
+    website_url: {
+        type: String,
+        default: 'https://www.vtoshio.com.br'
+    },
     logo: {
         type: String,
         default: esl_logo
@@ -57,7 +61,7 @@ const props = defineProps({
         <!-- Sidebar Lateral (Apenas Desktop) -->
         <div v-if="!isMobile" class="flex flex-col justify-between w-1/5">
             <div class="flex flex-col items-center gap-3 group">
-                <a href="https://www.eslsistemas.com.br" target="_blank" class="rounded-xl shadow w-1/2 p-5 py-8">
+                <a :href="props.website_url" target="_blank" class="rounded-xl shadow w-1/2 p-5 py-8">
                     <img :src="props.logo" class="group-hover:scale-110 transition-all" alt="Logo">
                 </a>
                 <span class="text-sm uppercase tracking-widest text-gray-500 font-bold mb-6 text-center">

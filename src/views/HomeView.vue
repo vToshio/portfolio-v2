@@ -148,6 +148,7 @@ import pref_an_logo from '@/assets/images/pref-artur-nogueira.png'
 
       <div class="flex flex-col gap-15">
         <ExperienceCard :company="'ESL Sistemas'" :logo="esl_logo"
+                        :website_url="'https://www.eslsistemas.com.br'"
                         :job_title="'Estagiário de Desenvolvimento Web'"
                         :topics="[
                           'Atuação no suporte técnico especializado níveis N1 e N2, solucionando incidentes diários e assegurando o cumprimento de acordos de nível de serviço (SLA).',
@@ -158,6 +159,7 @@ import pref_an_logo from '@/assets/images/pref-artur-nogueira.png'
                         :skills="['Ruby on Rails', 'VueJS', 'REST/RESTful', 'GraphQL']"
                         :start="'2025'" :end="'Atual'" />
         <ExperienceCard :company="'Prefeitura Municipal de Artur Nogueira'" :logo="pref_an_logo"
+                        :website_url="'https://arturnogueira.sp.gov.br/site/'"
                         :job_title="'Estagiário de TI'"
                         :skills="['PowerShell', 'Bash', 'Python']"
                         :topics="[
