@@ -62,9 +62,9 @@ const props = defineProps({
                 <span class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-3">
                     Stack
                 </span>
-                <ul class="flex flex-wrap gap-3 list-none text-sm">
+                <ul class="flex flex-wrap gap-2 list-none text-sm">
                     <li v-for="tech in props.skills" :key="tech"
-                        class="font-light text-nowrap hover:text-indigo-500 hover:scale-110 transition-all">
+                        class="tag">
                         {{ tech }}
                     </li>
                 </ul>
@@ -115,7 +115,7 @@ const props = defineProps({
                 </span>
                 <ul class="flex flex-wrap gap-2 justify-center">
                     <li v-for="tech in skills" :key="tech"
-                        class="text-nowrap text-xs px-3 py-1 shadow border border-gray-400/30 rounded-2xl">
+                        class="tag">
                             {{ tech }}
                     </li>
                 </ul>

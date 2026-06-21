@@ -56,7 +56,7 @@ const { isMobile } = useIsMobile(1024);
       <span class="text-indigo-500">1.</span> 
       Sobre Mim
     </h1>
-    <hr class="mx-auto w-1/2 mt-3 mb-10">
+    <hr class="mt-3 mb-8 mx-auto w-20 border-t-4 border-indigo-500 rounded-full">
 
     <div class="flex flex-col-reverse xl:flex-row justify-center w-full mt-10 gap-5">
       <div class="flex flex-col gap-2 text-justify px-5 mx-8 md:mx-auto md:max-w-3/4 xl:mx-0 xl:max-w-1/2">
@@ -115,20 +115,20 @@ const { isMobile } = useIsMobile(1024);
       <span class="text-indigo-500">2.</span> 
       Projetos
     </h1>
-    <hr class="mx-auto w-1/2 mt-3 mb-10">
+    <hr class="mt-3 mb-8 mx-auto w-20 border-t-4 border-indigo-500 rounded-full">
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 w-full px-5 group/opaque">
       <ProjectCard class="col-span-1 lg:col-span-2 hover:opacity-100 hover:scale-101 group-hover/opaque:opacity-50"
                    :year="2026"
                    :project_name="'API de Pesquisa Híbrida'"
-                   :project_description="'Protótipo de API para recuperação inteligente de informações (TCC/FHO). Utiliza Elasticsearch e modelos de Linguagem Natural para realizar pesquisas híbridas, integrando busca semântica (vetorial) e busca por palavras-chave para identificar os trechos mais relevantes de um documento.'"
-                   :tags="['Python', 'FastAPI', 'API RESTful', 'SentenceTransformers', 'HuggingFace', 'Elasticsearch']"
+                   :project_description="'Protótipo de uma API RESTful para pesquisa híbrida de informações, utilizada no meu TCC (FHO, 2026). Utiliza de processos de geração de embeddings com modelos de encoding neurais, para similaridade semântica, e o Elasticsearch para indexação e como motor de busca híbrido (k-NN + BM-25).'"
+                   :tags="['Python', 'FastAPI', 'API RESTful', 'Transformers', 'Elasticsearch']"
                    :github_url="'https://github.com/vToshio/hybrid-search-api'"/>
       <ProjectCard class="col-span-1 hover:opacity-100 group-hover/opaque:opacity-50 hover:scale-101"
                    :year="2026"
-                   :project_name="'Benchmarking de Modelos NLP'"
-                   :project_description="'Ferramenta desenvolvida para testar a eficiência computacional e de similaridade de palavras de modelos de geração de embeddings do HuggingFace.'"
-                   :tags="['Python', 'HuggingFace', 'SentenceTransformers', 'NLP']"
+                   :project_name="'Benchmark NLP'"
+                   :project_description="'Testes de eficiência e similaridade semântica de encoders disponíveis no HuggingFace.'"
+                   :tags="['Python', 'Transformers', 'NLP']"
                    :github_url="'https://github.com/vToshio/hf-embeddings-models'"/>
       <ProjectCard class="col-span-1 hover:opacity-100 group-hover/opaque:opacity-50 hover:scale-101"
                    :year="2025"
@@ -138,8 +138,8 @@ const { isMobile } = useIsMobile(1024);
                    :github_url="'https://github.com/vToshio/beewatts'"/>
       <ProjectCard class="col-span-1 hover:opacity-100 group-hover/opaque:opacity-50 hover:scale-101"
                    :year="2024"
-                   :project_name="'Sistema de Gestão de Estoque'"
-                   :project_description="'Aplicação Full-stack com API RESTful integrada e interface dinâmica (AJAX/Fetch). Gerencia produtos, clientes e vendas com foco em uma experiência de usuário dinâmica e modelagem de dados eficiente. '"
+                   :project_name="'Gestão de Estoque'"
+                   :project_description="'Aplicação Full-stack para gestão de produtos, clientes e vendas com API RESTful integrada e interface dinâmica (AJAX/Fetch).'"
                    :tags="['Python', 'Flask', 'JavaScript', 'Bootstrap']"
                    :github_url="'https://github.com/vToshio/sistema-inventario-flask'"/>
       <AllProjectCard class="hover:opacity-100 group-hover/opaque:opacity-50 hover:scale-101" />
@@ -150,7 +150,7 @@ const { isMobile } = useIsMobile(1024);
         <span class="text-indigo-500">3.</span> 
         Experiências
       </h1>
-      <hr class="mx-auto w-1/2 mt-3 mb-8">
+      <hr class="mt-3 mb-8 mx-auto w-20 border-t-4 border-indigo-500 rounded-full">
 
       <div class="flex flex-col gap-15">
         <ExperienceCard :company="'ESL Sistemas'" :logo="esl_logo"
@@ -178,13 +178,13 @@ const { isMobile } = useIsMobile(1024);
     </div>
 
     <div class="max-w-6xl mx-auto my-15 px-6">
-      <div class="border border-zinc-100 rounded-2xl shadow-sm hover:shadow-md transition-all">
+      <div class="group border border-zinc-100 rounded-2xl shadow-sm hover:shadow-md transition-all">
         <div class="flex flex-row text-left px-8 md:px-12">
           <div class="space-y-3 w-full sm:w-1/2 py-15">
             <h1 class="text-4xl font-bold tracking-tight">
               Quer saber mais<span class="text-indigo-500">?</span>
             </h1>
-            <p class="text-base text-zinc-500 font-light">
+            <p class="text-base text-neutral-500 font-light">
               Explore em detalhes a minha trajetória acadêmica, competências técnicas e experiências profissionais.
             </p>
 
@@ -201,7 +201,7 @@ const { isMobile } = useIsMobile(1024);
           
           <template v-if="!isMobile">
             <div class="flex justify-center items-center w-1/2">
-              <img class="w-1/2" :src="resumeImg" alt="">
+              <img class="w-1/2 group-hover:scale-110 transition-all duration-300" :src="resumeImg" alt="">
             </div>
           </template>
         </div>

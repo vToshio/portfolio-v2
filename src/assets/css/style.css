@@ -13,15 +13,7 @@
 }
 
 .menu-item {
-    @apply py-2 pl-2 pe-10 hover:cursor-pointer transition-colors duration-300 hover:bg-neutral-200
-}
-
-.menu-item-top {
-    @apply rounded-t-md pl-2 py-2 pe-10 hover:cursor-pointer transition-colors duration-300 hover:bg-neutral-200
-}
-
-.menu-item-bottom {
-    @apply rounded-b-md pl-2 py-2 pe-10 hover:cursor-pointer transition-colors duration-300 hover:bg-neutral-200
+    @apply flex items-center px-4 py-2.5 text-sm font-medium tracking-tight text-neutral-600 hover:bg-neutral-200/50 hover:text-neutral-900 hover:cursor-pointer transition-all duration-200
 }
 
 .card {
@@ -33,11 +25,19 @@
 }
 
 .tag {
-    @apply border border-solid rounded-full transition-colors duration-300 text-indigo-500 bg-neutral-100 hover:bg-indigo-500 hover:border-indigo-500 hover:text-neutral-100
+    @apply text-nowrap rounded-full text-xs tracking-tighter px-3 py-1 shadow-sm border border-neutral-400/30 text-neutral-600 transition-all duration-300 hover:scale-102 hover:cursor-pointer hover:border-indigo-500 hover:bg-indigo-500 hover:text-neutral-50
+}
+
+.tag-indigo {
+    @apply text-nowrap rounded-full text-xs tracking-tighter px-3 py-1 shadow-sm border border-indigo-400/30 text-indigo-400 transition-all duration-300 hover:scale-102 hover:cursor-pointer hover:border-indigo-500 hover:bg-indigo-500 hover:text-neutral-50
+}
+
+.tech-tag {
+    @apply text-nowrap text-xs px-3 py-1 shadow border border-neutral-400/30 rounded-2xl hover:shadow-sm hover:shadow-indigo-500/40 transition-all
 }
 
 .btn {
-    @apply border border-zinc-300 rounded-md py-2 w-2/3 text-zinc-500 hover:text-zinc-900 hover:scale-105 hover:cursor-pointer transition-all
+    @apply border border-zinc-300 rounded-md py-2 w-2/3 text-neutral-500/80 hover:text-neutral-900 hover:scale-105 hover:cursor-pointer transition-all
 }
 
 .btn-indigo {

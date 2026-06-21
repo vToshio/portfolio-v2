@@ -14,34 +14,39 @@ const clicked = ref(false)
     </button>
 
     <template v-if="clicked">
-        <div class="fixed top-15 right-3 rounded-md bg-neutral-100 shadow-md shadow-neutral-500">
-            <ul class="flex flex-col justify-center text-base">
-                <li class="menu-item-top">
+        <div class="fixed inset-0 z-40" @click="clicked = false"></div>
+
+        <div class="fixed top-16 right-4 z-50 min-w-45 rounded-xl border border-neutral-200/60 bg-white/95 backdrop-blur-md p-1.5 shadow-xl shadow-neutral-200/50 overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+            <ul class="flex flex-col gap-0.5 text-sm">
+                <RouterLink :to="{ path: '/', hash: '#about' }" class="menu-item">
                     Sobre
-                </li>
-                <li class="menu-item">
+                </RouterLink>
+                <RouterLink :to="{ path: '/', hash: '#projects' }" class="menu-item">
                     Projetos
-                </li>
-                <li class="menu-item">
-                    Experiência
-                </li>
-                <li class="menu-item">
+                </RouterLink>
+                <RouterLink :to="{ path: '/', hash: '#experiences' }" class="menu-item">
+                    Experiências
+                </RouterLink>
+                <RouterLink to="/contact" class="menu-item">
                     Contato
-                </li>
+                </RouterLink>
                 <li class="menu-item">
                     Currículo
                 </li>
-                <hr class="my-1 mx-2 text-neutral-800">
-                <li class="menu-item">
-                    <a href="https://www.github.com/vToshio" rel="noopenner noreferrer" target="_blank" class="flex gap-1">
-                        <img :src="gh_icon" class="w-4" alt="Meu Github">
-                        Github
+                
+                <!-- Divisor moderno e sutil -->
+                <div class="my-1.5 border-t border-neutral-300"></div>
+                
+                <li>
+                    <a href="https://www.github.com/vToshio" rel="noopener noreferrer" target="_blank" class="menu-item gap-2.5">
+                        <img :src="gh_icon" class="w-4 h-4 opacity-70" alt="">
+                        <span>Github</span>
                     </a>
                 </li>
-                <li class="menu-item-bottom">
-                    <a href="https://www.linkedin.com/in/vtoshio" rel="noopenner noreferrer" target="_blank" class="flex gap-1">
-                        <img :src="linkedin_icon" class="w-4" alt="Meu Github">
-                        LinkedIn
+                <li>
+                    <a href="https://www.linkedin.com/in/vtoshio" rel="noopener noreferrer" target="_blank" class="menu-item gap-2.5">
+                        <img :src="linkedin_icon" class="w-4 h-4 opacity-70" alt="">
+                        <span>LinkedIn</span>
                     </a>
                 </li>
             </ul>

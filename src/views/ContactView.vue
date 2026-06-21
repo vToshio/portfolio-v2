@@ -24,10 +24,10 @@ const { isMobile } = useIsMobile(1024);
 
     <section id="title" class="flex justify-center max-w-6xl mx-auto mt-40 mb-15">
         <div class="flex flex-col text-center w-3/4">
-            <h1 class="text-6xl font-bold tracking-tight mb-3">
+            <h1 class="text-6xl font-bold tracking-tight mb-5 text-neutral-900">
                 Vamos criar algo juntos?
             </h1>
-            <span class="flex text-lg font-light tracking-tight justify-center">
+            <span class="flex text-lg font-light justify-center text-neutral-900">
                 Estou sempre aberto a novas conversas sobre o mundo tech. Se você tem um projeto saindo do papel e busca parceria, me manda uma mensagem. Vamos fazer acontecer!
             </span>
         </div>
@@ -48,7 +48,7 @@ const { isMobile } = useIsMobile(1024);
                 
                 <FormSelect v-model="formData.subject_theme" label="Tema" id="tema" name="subject_theme"
                             :options="[
-                                { value: 'faq', label: 'Dúvida' },
+                                { value: 'pergunta', label: 'Dúvida' },
                                 { value: 'desenvolvimento', label: 'Desenvolvimento de Projeto' },
                                 { value: 'proposta', label: 'Proposta Profissional'}
                             ]"/>
