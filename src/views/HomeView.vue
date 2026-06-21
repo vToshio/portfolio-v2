@@ -28,15 +28,9 @@ import resumeImg from '@/assets/svg/storyset/resume.svg';
 import esl_logo from '@/assets/images/esl-color.png'
 import pref_an_logo from '@/assets/images/pref-artur-nogueira.png'
 
-import { onMounted, onUnmounted, ref } from 'vue';
+import { useIsMobile } from '@/lib/useIsMobile';
 
-const isMobile = ref(false);
-const checkScreenSize = () => {
-    isMobile.value = window.innerWidth < 1024;
-};
-
-onMounted(() => { checkScreenSize(); window.addEventListener('resize', checkScreenSize); });
-onUnmounted(() => { window.removeEventListener('resize', checkScreenSize); });
+const { isMobile } = useIsMobile(1024);
 </script>
 
 <template>

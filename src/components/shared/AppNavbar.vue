@@ -3,12 +3,9 @@ import logo from '@/assets/svg/logoipsum.svg';
 import gh_icon from '@/assets/svg/gh-icon.svg';
 import linkedin_icon from '@/assets/svg/linkedin-icon.svg';
 import MenuButton from '../reactive/MenuButton.vue';
+import { useIsMobile } from '@/lib/useIsMobile';
 
-import { useWindowSize } from '@vueuse/core';
-import { computed } from 'vue';
-
-const { width } = useWindowSize();
-const isMobile = computed(() => width.value < 768);
+const { isMobile } = useIsMobile(768);
 </script>
 
 <template>

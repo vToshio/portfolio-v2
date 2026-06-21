@@ -1,20 +1,9 @@
 <script setup>
 import esl_logo from '@/assets/images/esl-color.png';
-import { defineProps, ref, onMounted, onUnmounted } from 'vue';
+import { defineProps } from 'vue';
+import { useIsMobile } from '@/lib/useIsMobile';
 
-const isMobile = ref(false);
-const checkScreenSize = () => {
-    isMobile.value = window.innerWidth < 768;
-};
-
-onMounted(() => {
-    checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
-});
-
-onUnmounted(() => {
-    window.removeEventListener('resize', checkScreenSize);
-});
+const { isMobile } = useIsMobile(768);
 
 const props = defineProps({
     company: {

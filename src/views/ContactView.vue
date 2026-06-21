@@ -6,25 +6,18 @@ import AppToast from '@/components/reactive/AppToast.vue';
 
 import { useToast } from '@/lib/useToast';
 import { useContactForm } from '@/lib/useContactForm';
+import { useIsMobile } from '@/lib/useIsMobile';
+import { ref } from 'vue';
 
 import githubIcon from '@/assets/svg/gh-icon.svg';
 import chattingImg from '@/assets/svg/storyset/chatting.svg';
-import { onMounted, onUnmounted, ref } from 'vue';
 
 const contactForm = ref(null);
 
 // Inicialização das lógicas segregadas
 const { toasts, addToast, removeToast } = useToast();
 const { formData, isSending, sendEmail } = useContactForm(addToast);
-
-// Lógica de UI (Responsividade)
-const isMobile = ref(false);
-const checkScreenSize = () => {
-    isMobile.value = window.innerWidth < 1024;
-};
-
-onMounted(() => { checkScreenSize(); window.addEventListener('resize', checkScreenSize); });
-onUnmounted(() => { window.removeEventListener('resize', checkScreenSize); });
+const { isMobile } = useIsMobile(1024);
 </script>
 <template>
     <AppToast :toasts="toasts" @remove="removeToast" />
