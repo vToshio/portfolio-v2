@@ -24,7 +24,7 @@ const { isMobile } = useIsMobile(1024);
 
     <section id="title" class="flex justify-center max-w-6xl mx-auto mt-40 mb-15">
         <div class="flex flex-col text-center w-3/4">
-            <h1 class="text-6xl font-bold tracking-tight mb-3 text-neutral-900">
+            <h1 class="text-6xl font-bold tracking-tight mb-5 text-neutral-900">
                 Vamos criar algo juntos?
             </h1>
             <span class="flex text-lg font-light justify-center text-neutral-900">

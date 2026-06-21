@@ -13,15 +13,7 @@
 }
 
 .menu-item {
-    @apply py-2 pl-2 pe-10 hover:cursor-pointer transition-colors duration-300 hover:bg-neutral-200
-}
-
-.menu-item-top {
-    @apply rounded-t-md pl-2 py-2 pe-10 hover:cursor-pointer transition-colors duration-300 hover:bg-neutral-200
-}
-
-.menu-item-bottom {
-    @apply rounded-b-md pl-2 py-2 pe-10 hover:cursor-pointer transition-colors duration-300 hover:bg-neutral-200
+    @apply flex items-center px-4 py-2.5 text-sm font-medium tracking-tight text-neutral-600 hover:bg-neutral-200/50 hover:text-neutral-900 hover:cursor-pointer transition-all duration-200
 }
 
 .card {
