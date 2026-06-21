@@ -33,7 +33,15 @@
 }
 
 .tag {
-    @apply border border-solid rounded-full transition-colors duration-300 text-indigo-500 bg-neutral-100 hover:bg-indigo-500 hover:border-indigo-500 hover:text-neutral-100
+    @apply text-nowrap rounded-full text-xs tracking-tighter px-3 py-1 shadow-sm border border-neutral-400/30 text-neutral-600 transition-all duration-300 hover:scale-102 hover:cursor-pointer hover:border-indigo-500 hover:bg-indigo-500 hover:text-neutral-50
+}
+
+.tag-indigo {
+    @apply text-nowrap rounded-full text-xs tracking-tighter px-3 py-1 shadow-sm border border-indigo-400/30 text-indigo-400 transition-all duration-300 hover:scale-102 hover:cursor-pointer hover:border-indigo-500 hover:bg-indigo-500 hover:text-neutral-50
+}
+
+.tech-tag {
+    @apply text-nowrap text-xs px-3 py-1 shadow border border-neutral-400/30 rounded-2xl hover:shadow-sm hover:shadow-indigo-500/40 transition-all
 }
 
 .btn {
