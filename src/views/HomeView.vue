@@ -178,7 +178,7 @@ const { isMobile } = useIsMobile(1024);
     </div>
 
     <div class="max-w-6xl mx-auto my-15 px-6">
-      <div class="border border-zinc-100 rounded-2xl shadow-sm hover:shadow-md transition-all">
+      <div class="group border border-zinc-100 rounded-2xl shadow-sm hover:shadow-md transition-all">
         <div class="flex flex-row text-left px-8 md:px-12">
           <div class="space-y-3 w-full sm:w-1/2 py-15">
             <h1 class="text-4xl font-bold tracking-tight">
@@ -201,7 +201,7 @@ const { isMobile } = useIsMobile(1024);
           
           <template v-if="!isMobile">
             <div class="flex justify-center items-center w-1/2">
-              <img class="w-1/2" :src="resumeImg" alt="">
+              <img class="w-1/2 group-hover:scale-110 transition-all duration-300" :src="resumeImg" alt="">
             </div>
           </template>
         </div>
