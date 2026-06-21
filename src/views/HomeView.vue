@@ -184,7 +184,7 @@ const { isMobile } = useIsMobile(1024);
             <h1 class="text-4xl font-bold tracking-tight">
               Quer saber mais<span class="text-indigo-500">?</span>
             </h1>
-            <p class="text-base text-zinc-500 font-light">
+            <p class="text-base text-neutral-500 font-light">
               Explore em detalhes a minha trajetória acadêmica, competências técnicas e experiências profissionais.
             </p>
 

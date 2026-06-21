@@ -17,7 +17,7 @@ const props = defineProps({
             <h2 class="text-2xl font-bold tracking-tight mb-2">{{ project_name }}</h2>
             <span class="text-2xl font-light tracking-tight">{{ year }}</span>
         </div>
-        <p class="text-sm tracking-wide text-justify">
+        <p class="text-sm font-light text-justify">
             {{ project_description }}
         </p>
 
