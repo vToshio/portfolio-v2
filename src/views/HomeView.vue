@@ -56,7 +56,7 @@ const { isMobile } = useIsMobile(1024);
       <span class="text-indigo-500">1.</span> 
       Sobre Mim
     </h1>
-    <hr class="mx-auto w-1/2 mt-3 mb-10">
+    <hr class="mt-3 mb-8 mx-auto w-20 border-t-4 border-indigo-500 rounded-full">
 
     <div class="flex flex-col-reverse xl:flex-row justify-center w-full mt-10 gap-5">
       <div class="flex flex-col gap-2 text-justify px-5 mx-8 md:mx-auto md:max-w-3/4 xl:mx-0 xl:max-w-1/2">
@@ -115,7 +115,7 @@ const { isMobile } = useIsMobile(1024);
       <span class="text-indigo-500">2.</span> 
       Projetos
     </h1>
-    <hr class="mx-auto w-1/2 mt-3 mb-10">
+    <hr class="mt-3 mb-8 mx-auto w-20 border-t-4 border-indigo-500 rounded-full">
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 w-full px-5 group/opaque">
       <ProjectCard class="col-span-1 lg:col-span-2 hover:opacity-100 hover:scale-101 group-hover/opaque:opacity-50"
@@ -150,7 +150,7 @@ const { isMobile } = useIsMobile(1024);
         <span class="text-indigo-500">3.</span> 
         Experiências
       </h1>
-      <hr class="mx-auto w-1/2 mt-3 mb-8">
+      <hr class="mt-3 mb-8 mx-auto w-20 border-t-4 border-indigo-500 rounded-full">
 
       <div class="flex flex-col gap-15">
         <ExperienceCard :company="'ESL Sistemas'" :logo="esl_logo"
