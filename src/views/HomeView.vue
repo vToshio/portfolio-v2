@@ -23,8 +23,20 @@ import fedora from '@/assets/svg/languages/fedora.svg';
 import github from '@/assets/svg/gh-icon.svg';
 import ai from '@/assets/svg/languages/ai-icon.svg';
 
+import resumeImg from '@/assets/svg/storyset/resume.svg';
+
 import esl_logo from '@/assets/images/esl-color.png'
 import pref_an_logo from '@/assets/images/pref-artur-nogueira.png'
+
+import { onMounted, onUnmounted, ref } from 'vue';
+
+const isMobile = ref(false);
+const checkScreenSize = () => {
+    isMobile.value = window.innerWidth < 1024;
+};
+
+onMounted(() => { checkScreenSize(); window.addEventListener('resize', checkScreenSize); });
+onUnmounted(() => { window.removeEventListener('resize', checkScreenSize); });
 </script>
 
 <template>
@@ -168,6 +180,37 @@ import pref_an_logo from '@/assets/images/pref-artur-nogueira.png'
                           'Providência de suporte técnico especializado para usuários internos, solucionando problemas de software e conectividade para múltiplos departamentos.'
                         ]"
                         :start="'2023'" :end="'2025'" />
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto my-15 px-6">
+      <div class="border border-zinc-100 rounded-2xl shadow-sm hover:shadow-md transition-all">
+        <div class="flex flex-row text-left px-8 md:px-12">
+          <div class="space-y-3 w-full sm:w-1/2 py-15">
+            <h1 class="text-4xl font-bold tracking-tight">
+              Quer saber mais<span class="text-indigo-500">?</span>
+            </h1>
+            <p class="text-base text-zinc-500 font-light">
+              Explore em detalhes a minha trajetória acadêmica, competências técnicas e experiências profissionais.
+            </p>
+
+            <div class="flex gap-5 pt-2">
+              <button class="btn-indigo btn-sm">
+                Baixar Currículo
+              </button>
+
+              <RouterLink :to="{ path: '/contact'}" class="btn btn-sm">
+                Entre em Contato
+              </RouterLink>
+            </div>
+          </div>
+          
+          <template v-if="!isMobile">
+            <div class="flex justify-center items-center w-1/2">
+              <img class="w-1/2" :src="resumeImg" alt="">
+            </div>
+          </template>
+        </div>
       </div>
     </div>
   </section>

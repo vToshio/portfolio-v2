@@ -35,3 +35,15 @@
 .tag {
     @apply border border-solid rounded-full transition-colors duration-300 text-indigo-500 bg-neutral-100 hover:bg-indigo-500 hover:border-indigo-500 hover:text-neutral-100
 }
+
+.btn {
+    @apply border border-zinc-300 rounded-md py-2 w-2/3 text-zinc-500 hover:text-zinc-900 hover:scale-105 hover:cursor-pointer transition-all
+}
+
+.btn-indigo {
+    @apply rounded-md py-2 w-2/3 text-neutral-100 transition-all bg-indigo-500 hover:scale-105 hover:bg-indigo-600 hover:cursor-pointer disabled:bg-gray-400 disabled:scale-100 disabled:cursor-not-allowed
+}
+
+.btn-sm {
+    @apply w-auto text-sm px-6 py-2 font-medium text-nowrap
+}
