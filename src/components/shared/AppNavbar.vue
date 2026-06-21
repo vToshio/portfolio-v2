@@ -3,35 +3,32 @@ import logo from '@/assets/svg/logoipsum.svg';
 import gh_icon from '@/assets/svg/gh-icon.svg';
 import linkedin_icon from '@/assets/svg/linkedin-icon.svg';
 import MenuButton from '../reactive/MenuButton.vue';
+import { useIsMobile } from '@/lib/useIsMobile';
 
-import { useWindowSize } from '@vueuse/core';
-import { computed } from 'vue';
-
-const { width } = useWindowSize();
-const isMobile = computed(() => width.value < 768);
+const { isMobile } = useIsMobile(768);
 </script>
 
 <template>
     <header class="fixed top-0 z-100 w-full bg-neutral-100/80 backdrop-blur-md shadow-md shadow-neutral-200">
         <nav class="flex mx-auto justify-between md:justify-around items-stretch">
-            <RouterLink to="#hero" class="hover:cursor-pointer">
+            <RouterLink :to="{ path: '/', hash: '#hero' }" class="hover:cursor-pointer">
                 <img class="w-35 py-4 px-4 md:px-2" :src="logo" alt="Logo Vinícius Toshio">
             </RouterLink>
             
             <div v-if="!isMobile" class="flex items-stretch gap-3">
                 <ul class="flex items-stretch text-base font-light text-shadow-2xs">
-                    <li class="navbar-item">
+                    <RouterLink :to="{ path: '/', hash: '#about' }" class="navbar-item">
                         sobre
-                    </li>
-                    <li class="navbar-item">
+                    </RouterLink>
+                    <RouterLink :to="{ path: '/', hash: '#projects' }" class="navbar-item">
                         projetos
-                    </li>
-                    <li class="navbar-item">
-                        experiência
-                    </li>
-                    <li class="navbar-item">
+                    </RouterLink>
+                    <RouterLink :to="{ path: '/', hash: '#experiences' }" class="navbar-item">
+                        experiências
+                    </RouterLink>
+                    <RouterLink to="/contact" class="navbar-item">
                         contato
-                    </li>
+                    </RouterLink>
                     <li class="navbar-item">
                         currículo
                     </li>
