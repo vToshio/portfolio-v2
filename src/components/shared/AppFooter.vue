@@ -11,22 +11,22 @@ import linkedin_icon from '@/assets/svg/linkedin-icon.svg';
           Vinícius <span class="text-indigo-500">Toshio</span>
         </h2>
         <p class="text-sm font-normal max-w-xs leading-relaxed">
-          Transformando ideias em soluções digitais eficientes e escaláveis.
+          {{ $t('footer.catch-phrase') }}
         </p>
       </div>
 
       <nav class="flex flex-wrap justify-center gap-8 text-[11px] uppercase tracking-[0.2em] font-bold">
         <RouterLink :to="{ path: '/', hash: '#about' }" class="hover:text-indigo-500 transition-colors">
-            Sobre
+            {{ $t('nav.about') }}
         </RouterLink>
         <RouterLink :to="{ path: '/', hash: '#projects' }" class="hover:text-indigo-500 transition-colors">
-            Projetos
+            {{ $t('nav.projects') }}
         </RouterLink>
         <RouterLink :to="{ path: '/', hash: '#experiences' }" class="hover:text-indigo-500 transition-colors">
-            Experiências
+            {{ $t('nav.experiences') }}
         </RouterLink  >
         <RouterLink to="/contact" rel="noopenner noreferren" target="_blank" class="hover:text-indigo-500 transition-colors">
-            Contato
+            {{ $t('nav.contact') }}
         </RouterLink>
       </nav>
 
@@ -42,9 +42,8 @@ import linkedin_icon from '@/assets/svg/linkedin-icon.svg';
       </div>
     </div>
 
-    <!-- Bottom Bar -->
     <div class="max-w-5xl mx-auto mt-16 pt-8 border-t border-neutral-200 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[0.15em] text-neutral-400 font-medium">
-      <p>© {{ new Date().getFullYear() }} — Desenvolvido com Vue.js e Tailwind CSS</p>
+      <p>© {{ new Date().getFullYear() }} — {{ $t('footer.development') }}</p>
       <p>Araras, SP</p>
     </div>
   </footer>

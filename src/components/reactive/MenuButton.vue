@@ -20,19 +20,19 @@ const clicked = ref(false)
         <div class="fixed top-16 right-4 z-50 min-w-45 rounded-xl border border-neutral-200/60 bg-white/95 backdrop-blur-md p-1.5 shadow-xl shadow-neutral-200/50 overflow-hidden animate-in fade-in zoom-in-95 duration-150">
             <ul class="flex flex-col gap-0.5 text-sm">
                 <RouterLink :to="{ path: '/', hash: '#about' }" class="menu-item">
-                    Sobre
+                    {{ $t('nav.about') }}
                 </RouterLink>
                 <RouterLink :to="{ path: '/', hash: '#projects' }" class="menu-item">
-                    Projetos
+                    {{ $t('nav.projects') }}
                 </RouterLink>
                 <RouterLink :to="{ path: '/', hash: '#experiences' }" class="menu-item">
-                    Experiências
+                    {{ $t('nav.experiences') }}
                 </RouterLink>
                 <RouterLink to="/contact" class="menu-item">
-                    Contato
+                    {{ $t('nav.contact') }}
                 </RouterLink>
                 <li @click="downloadResume()" class="menu-item">
-                    Currículo
+                    {{ $t('nav.resume') }}
                 </li>
                 
                 <!-- Divisor moderno e sutil -->

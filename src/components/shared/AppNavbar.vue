@@ -19,19 +19,19 @@ const { isMobile } = useIsMobile(768);
             <div v-if="!isMobile" class="flex items-stretch gap-3">
                 <ul class="flex items-stretch text-base font-light text-shadow-2xs">
                     <RouterLink :to="{ path: '/', hash: '#about' }" class="navbar-item">
-                        sobre
+                        {{ $t('nav.about') }}
                     </RouterLink>
                     <RouterLink :to="{ path: '/', hash: '#projects' }" class="navbar-item">
-                        projetos
+                        {{ $t('nav.projects') }}
                     </RouterLink>
                     <RouterLink :to="{ path: '/', hash: '#experiences' }" class="navbar-item">
-                        experiências
+                        {{ $t('nav.experiences') }}
                     </RouterLink>
                     <RouterLink to="/contact" class="navbar-item">
-                        contato
+                        {{ $t('nav.contact') }}
                     </RouterLink>
                     <li @click="downloadResume()" class="navbar-item">
-                        currículo
+                        {{ $t('nav.resume') }}
                     </li>
                 </ul>
 
