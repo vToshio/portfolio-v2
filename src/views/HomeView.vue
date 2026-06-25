@@ -29,6 +29,7 @@ import esl_logo from '@/assets/images/esl-color.png'
 import pref_an_logo from '@/assets/images/pref-artur-nogueira.png'
 
 import { useIsMobile } from '@/lib/useIsMobile';
+import { downloadResume } from '@/services/exportResume';
 
 const { isMobile } = useIsMobile(1024);
 </script>
@@ -189,7 +190,7 @@ const { isMobile } = useIsMobile(1024);
             </p>
 
             <div class="flex gap-5 pt-2">
-              <button class="btn-indigo btn-sm">
+              <button @click="downloadResume()" class="btn-indigo btn-sm">
                 Baixar Currículo
               </button>
 
