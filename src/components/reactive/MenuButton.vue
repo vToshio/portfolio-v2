@@ -2,9 +2,11 @@
 import menu_icon from '@/assets/svg/menu.svg';
 import gh_icon from '@/assets/svg/gh-icon.svg';
 import linkedin_icon from '@/assets/svg/linkedin-icon.svg';
+import translationIcon from '@/assets/svg/translation-icon.svg';
 
 import { ref } from 'vue';
 import { downloadResume } from '@/services/exportResume';
+import { toggleLanguage } from '@/lib/useLocale';
 
 const clicked = ref(false)
 </script>
@@ -37,7 +39,12 @@ const clicked = ref(false)
                 
                 <!-- Divisor moderno e sutil -->
                 <div class="my-1.5 border-t border-neutral-300"></div>
-                
+                <li>
+                    <button class="menu-item w-full gap-2.5" @click="toggleLanguage()">
+                        <img :src="translationIcon" class="w-4 opacity-70 transition-all" alt="ícone de tradução">
+                        <span>{{ $t('nav.language') }}</span>
+                    </button>
+                </li>
                 <li>
                     <a href="https://www.github.com/vToshio" rel="noopener noreferrer" target="_blank" class="menu-item gap-2.5">
                         <img :src="gh_icon" class="w-4 h-4 opacity-70" alt="">

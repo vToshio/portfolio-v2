@@ -3,8 +3,11 @@ import logo from '@/assets/svg/logoipsum.svg';
 import gh_icon from '@/assets/svg/gh-icon.svg';
 import linkedin_icon from '@/assets/svg/linkedin-icon.svg';
 import MenuButton from '../reactive/MenuButton.vue';
+import translationIcon from '@/assets/svg/translation-icon.svg';
+
 import { useIsMobile } from '@/lib/useIsMobile';
 import { downloadResume } from '@/services/exportResume.js';
+import { toggleLanguage } from '@/lib/useLocale.js';
 
 const { isMobile } = useIsMobile(768);
 </script>
@@ -36,6 +39,9 @@ const { isMobile } = useIsMobile(768);
                 </ul>
 
                 <div class="flex items-stretch">
+                    <button class="navbar-item group" @click="toggleLanguage()">
+                        <img :src="translationIcon" class="w-8 group-hover:scale-110 transition-all" alt="ícone de tradução">
+                    </button>
                     <a class="navbar-item"
                        href="https://github.com/vToshio" rel="noopener noreferrer" target="_blank">
                         <img class="w-8" :src="gh_icon" alt="Meu Github">

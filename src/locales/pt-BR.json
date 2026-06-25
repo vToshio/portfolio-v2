@@ -4,7 +4,8 @@
         "projects": "projetos",
         "experiences": "experiências",
         "contact": "contato",
-        "resume": "currículo"
+        "resume": "currículo",
+        "language": "idioma"
     },
     "footer": {
         "development": "Desenvolvido com Vue.js e Tailwind CSS",
