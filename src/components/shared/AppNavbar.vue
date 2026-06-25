@@ -4,6 +4,7 @@ import gh_icon from '@/assets/svg/gh-icon.svg';
 import linkedin_icon from '@/assets/svg/linkedin-icon.svg';
 import MenuButton from '../reactive/MenuButton.vue';
 import { useIsMobile } from '@/lib/useIsMobile';
+import { downloadResume } from '@/services/exportResume.js';
 
 const { isMobile } = useIsMobile(768);
 </script>
@@ -29,7 +30,7 @@ const { isMobile } = useIsMobile(768);
                     <RouterLink to="/contact" class="navbar-item">
                         contato
                     </RouterLink>
-                    <li class="navbar-item">
+                    <li @click="downloadResume()" class="navbar-item">
                         currículo
                     </li>
                 </ul>

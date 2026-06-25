@@ -4,6 +4,7 @@ import gh_icon from '@/assets/svg/gh-icon.svg';
 import linkedin_icon from '@/assets/svg/linkedin-icon.svg';
 
 import { ref } from 'vue';
+import { downloadResume } from '@/services/exportResume';
 
 const clicked = ref(false)
 </script>
@@ -30,7 +31,7 @@ const clicked = ref(false)
                 <RouterLink to="/contact" class="menu-item">
                     Contato
                 </RouterLink>
-                <li class="menu-item">
+                <li @click="downloadResume()" class="menu-item">
                     Currículo
                 </li>
                 
