@@ -42,13 +42,13 @@ const { isMobile } = useIsMobile(768);
                     <button class="navbar-item group" @click="toggleLanguage()">
                         <img :src="translationIcon" class="w-8 group-hover:scale-110 transition-all" alt="ícone de tradução">
                     </button>
-                    <a class="navbar-item"
+                    <a class="navbar-item group"
                        href="https://github.com/vToshio" rel="noopener noreferrer" target="_blank">
-                        <img class="w-8" :src="gh_icon" alt="Meu Github">
+                        <img class="w-8 group-hover:scale-110 transition-all" :src="gh_icon" alt="Meu Github">
                     </a>
-                    <a class="navbar-item"
+                    <a class="navbar-item group"
                        href="https://www.linkedin.com/in/vtoshio" rel="noopener noreferrer" target="_blank">
-                        <img class="w-8" :src="linkedin_icon" alt="Meu LinkedIn">
+                        <img class="w-8 group-hover:scale-110 transition-all" :src="linkedin_icon" alt="Meu LinkedIn">
                     </a>
                 </div>
             </div>

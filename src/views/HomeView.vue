@@ -31,7 +31,7 @@ import pref_an_logo from '@/assets/images/pref-artur-nogueira.png'
 import { useIsMobile } from '@/lib/useIsMobile';
 import { downloadResume } from '@/services/exportResume';
 
-const { isMobile } = useIsMobile(1024);
+const { isMobile } = useIsMobile(714);
 </script>
 
 <template>
@@ -41,12 +41,14 @@ const { isMobile } = useIsMobile(1024);
     <div class="absolute z-20 mask-radial-from-5% mask-radial-to-90% bg-neutral-500/20 w-full h-full backdrop-blur-2xl"></div>
     <div class="absolute z-30 mask-radial-at-bottom mask-radial-from-5% mask-radial-to-60% bg-indigo-500/30 w-full h-full backdrop-blur-2xl"></div>
     <div class="absolute z-30 mask-radial-at-right mask-radial-from-5% mask-radial-to-60% bg-indigo-500/30 w-full h-full backdrop-blur-2xl"></div>
-    <div class="z-50 text-center mx-auto max-w-1/2">
+    <div class="z-50 text-center mx-auto xl:max-w-1/2">
       <div class="flex flex-col">
-        <span class="font-light text-2xl text-nowrap text-shadow-2xs text-shadow-neutral-500">{{ $t('home.hero.presentation') }}</span>
-        <h1 class="text-6xl font-bold my-3 italic tracking-tight text-shadow-2xs text-shadow-neutral-500">Vinícius Toshio</h1>
+        <span class="font-light text-base md:text-2xl text-nowrap text-shadow-2xs text-shadow-neutral-500">{{ $t('home.hero.presentation') }}</span>
+        <h1 class="text-5xl md:text-6xl font-bold my-3 italic tracking-tight text-shadow-2xs text-shadow-neutral-500">
+          Vinícius Toshio
+        </h1>
       </div>
-      <div class="flex items-center justify-center my-3 py-1.5 rounded-full bg-sky-500 shadow-xs shadow-neutral-500">
+      <div class="flex items-center justify-center my-3 py-1.5 rounded-full bg-sky-500 shadow-md shadow-neutral-700">
         <span class="text-sm md:text-base font-medium tracking-tight">{{ $t('home.hero.job-title') }}</span>
       </div>
     </div>
@@ -74,7 +76,7 @@ const { isMobile } = useIsMobile(1024);
     <div class="mx-auto max-w-6xl px-6 pt-12">
       <h2 class="text-center text-3xl font-bold tracking-tight text-neutral-900 mb-10">{{ $t('home.about.skills.title') }}</h2>
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div class="card">
           <h3 class="text-sm uppercase tracking-widest text-gray-500 font-bold mb-6">{{ $t('home.about.skills.languages') }}</h3>
           <div class="flex flex-wrap justify-center gap-6">
@@ -118,8 +120,8 @@ const { isMobile } = useIsMobile(1024);
     </h1>
     <hr class="mt-3 mb-8 mx-auto w-20 border-t-4 border-indigo-500 rounded-full">
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 w-full px-5 group/opaque">
-      <ProjectCard class="col-span-1 lg:col-span-2 hover:opacity-100 hover:scale-101 group-hover/opaque:opacity-50"
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 w-full px-5 group/opaque">
+      <ProjectCard class="col-span-1 md:col-span-2 hover:opacity-100 hover:scale-101 group-hover/opaque:opacity-50"
                    :year="2026"
                    :project_name="$t('home.projects.first.name')"
                    :project_description="$t('home.projects.first.description')"
@@ -182,19 +184,19 @@ const { isMobile } = useIsMobile(1024);
       <div class="group border border-zinc-100 rounded-2xl shadow-sm hover:shadow-md transition-all">
         <div class="flex flex-row text-left px-8 md:px-12">
           <div class="space-y-3 w-full sm:w-1/2 py-15">
-            <h1 class="text-4xl font-bold tracking-tight">
+            <h1 class="text-3xl md:text-4xl font-bold tracking-tight">
               {{ $t('home.know_more.title') }}<span class="text-indigo-500">?</span>
             </h1>
             <p class="text-base text-neutral-500 font-light">
               {{ $t('home.know_more.content') }}
             </p>
 
-            <div class="flex gap-5 pt-2">
+            <div class="flex flex-col sm:flex-row gap-5 pt-2">
               <button @click="downloadResume()" class="btn-indigo btn-sm">
                 {{ $t('home.know_more.download_resume') }}
               </button>
 
-              <RouterLink :to="{ path: '/contact'}" class="btn btn-sm">
+              <RouterLink :to="{ path: '/contact'}" class="btn btn-sm text-center">
                 {{ $t('home.know_more.contact') }}
               </RouterLink>
             </div>

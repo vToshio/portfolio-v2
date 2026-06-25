@@ -5,7 +5,7 @@ import linkedin_icon from '@/assets/svg/linkedin-icon.svg';
 
 <template>
   <footer class="bg-white/80 backdrop-blur-md text-neutral-500 py-16 px-6 border-t border-neutral-200">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10 text-center md:text-left">
+    <div class="max-w-5xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-10 text-center lg:text-left">
       <div class="flex flex-col gap-2">
         <h2 class="text-2xl font-bold text-neutral-900 tracking-tight">
           Vinícius <span class="text-indigo-500">Toshio</span>
@@ -42,7 +42,7 @@ import linkedin_icon from '@/assets/svg/linkedin-icon.svg';
       </div>
     </div>
 
-    <div class="max-w-5xl mx-auto mt-16 pt-8 border-t border-neutral-200 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[0.15em] text-neutral-400 font-medium">
+    <div class="max-w-5xl mx-auto mt-16 pt-8 border-t border-neutral-200 flex flex-col lg:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[0.15em] text-neutral-400 font-medium">
       <p>© {{ new Date().getFullYear() }} — {{ $t('footer.development') }}</p>
       <p>Araras, SP</p>
     </div>
