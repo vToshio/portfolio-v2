@@ -63,12 +63,9 @@ const { isMobile } = useIsMobile(714);
 
     <div class="flex flex-col-reverse xl:flex-row justify-center w-full mt-10 gap-5">
       <div class="flex flex-col gap-2 text-justify px-5 mx-8 md:mx-auto md:max-w-3/4 xl:mx-0 xl:max-w-1/2">
-        <p class="text-base font-light">
-          {{ $t('home.about.first_paragraph') }}
-        </p>
-        <p class="text-base font-light">
-          {{ $t('home.about.second_paragraph') }}
-        </p>
+        <p class="text-base font-light" v-html="$t('home.about.paragraphs.first')"></p>
+        <p class="text-base font-light" v-html="$t('home.about.paragraphs.second')"></p>
+        <p class="text-base font-light" v-html="$t('home.about.paragraphs.third')"></p>
       </div>
       <img class="w-100 mx-auto xl:mx-0 xl:max-w-1/2 rounded-xl" :src="placeholder" alt="">
     </div>
@@ -81,8 +78,13 @@ const { isMobile } = useIsMobile(714);
           <h3 class="text-sm uppercase tracking-widest text-gray-500 font-bold mb-6">{{ $t('home.about.skills.languages') }}</h3>
           <div class="flex flex-wrap justify-center gap-6">
             <img class="skill-icon" :src="ruby" alt="Ruby">
+            <span class="sr-only">Ruby</span>
+
             <img class="skill-icon" :src="python" alt="Python">
+            <span class="sr-only">Python</span>
+
             <img class="skill-icon" :src="javascript" alt="JavaScript">
+            <span class="sr-only">JavaScript</span>
           </div>
         </div>
 
@@ -90,10 +92,19 @@ const { isMobile } = useIsMobile(714);
           <h3 class="text-sm uppercase tracking-widest text-gray-500 font-bold mb-6">{{ $t('home.about.skills.frameworks') }}</h3>
           <div class="flex flex-wrap justify-center gap-6">
             <img class="skill-icon" :src="rails" alt="Rails">
+            <span class="sr-only">Ruby on Rails</span>
+
             <img class="skill-icon" :src="flask" alt="Flask">
+            <span class="sr-only">Flask</span>
+
             <img class="skill-icon" :src="fastapi" alt="FastAPI">
+            <span class="sr-only">FastAPI</span>
+
             <img class="skill-icon" :src="vuejs" alt="Vue.js">
+            <span class="sr-only">Vue.js</span>
+
             <img class="skill-icon" :src="tailwind" alt="TailwindCSS">
+            <span class="sr-only">TailwindCSS</span>
           </div>
         </div>
 
@@ -101,12 +112,30 @@ const { isMobile } = useIsMobile(714);
           <h3 class="text-sm uppercase tracking-widest text-gray-500 font-bold mb-6">{{ $t('home.about.skills.tools') }}</h3>
           <div class="flex flex-wrap justify-center gap-6">
             <img class="skill-icon" :src="vscode" alt="VS Code">
+            <span class="sr-only">VSCode</span>
+
             <img class="skill-icon" :src="postman" alt="Postman">
+            <span class="sr-only">Postman</span>
+
             <img class="skill-icon" :src="docker" alt="Docker">
-            <img class="skill-icon" :src="github" alt="GitHub">
+            <span class="sr-only">Docker</span>
+            
             <img class="skill-icon" :src="git" alt="Git">
+            <span class="sr-only">Git</span>
+            
+            <img class="skill-icon" :src="github" alt="GitHub">
+            <span class="sr-only">Github</span>
+            
             <img class="skill-icon" :src="fedora" alt="Fedora">
+            <span class="sr-only">Fedora</span>
+            <span class="sr-only">Linux</span>
+            <span class="sr-only">Ubuntu</span>
+
             <img class="skill-icon" :src="ai" alt="Inteligência Artificial">
+            <span class="sr-only">AI</span>
+            <span class="sr-only">IA</span>
+            <span class="sr-only">Artificial Intelligence</span>
+            <span class="sr-only">Inteligência Artificial</span>
           </div>
         </div>
       </div>

@@ -8,6 +8,10 @@
     src: url('../../assets/fonts/Montserrat-VariableFont_wght.woff2') format('woff2');
 }
 
+strong {
+    @apply font-semibold text-indigo-900 hover:text-indigo-600 transition-all duration-300
+}
+
 .navbar-item {
     @apply flex items-center px-4 transition-colors duration-300 hover:bg-neutral-200 hover:cursor-pointer
 }

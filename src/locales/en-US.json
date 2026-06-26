@@ -18,8 +18,11 @@
         },
         "about": {
             "title": "About Me",
-            "first_paragraph": "First paragraph test.",
-            "second_paragraph": "Second paragraph test.",
+            "paragraphs": {
+                "first": "I am an early-career Full-Stack Developer passionate about software development and systems architecture. I have a strong interest in building efficient, scalable, and well-structured web applications, constantly striving to improve my knowledge of software development, best practices, and emerging technologies. I am currently completing my Bachelor's degree in Information Systems at <strong>Fundação Hermínio Ometto (FHO - Uniararas)</strong>, where I also achieved first place in the <strong>18th FHO Programming Marathon (2023)</strong>.",
+                "second": "Professionally, I work as a Software Development Intern at <strong>ESL - Excelência em Sistemas Logísticos</strong>, developing features for logistics sector TMS systems using Ruby on Rails. I have practical experience in Full-Stack Web Development, with solid back-end skills in Ruby and Python, as well as front-end experience using Vue.js to build modern, responsive, and professional user interfaces.",
+                "third": "Although my primary focus is on web technologies, I also have a strong interest in and continuously study areas such as Artificial Intelligence and Mobile Development. Outside of work, I enjoy dedicating my time to personal projects, exploring new technologies, reading horror stories, making music, and spending quality time with family and friends — experiences that help keep my creativity and curiosity constantly alive."
+            },
             "skills": {
                 "title": "Skills",
                 "languages": "Languages",
@@ -42,7 +45,7 @@
                 "description": "A tool designed to simulate savings and estimate the investment required for installing solar energy systems based on the user's energy consumption."
             },
             "fourth": {
-                "name": "Inventory Management System",
+                "name": "Stock Management System",
                 "description": "Full-stack application for managing products, customers, and sales, featuring an integrated RESTful API and a dynamic interface (AJAX/Fetch)."
             },
             "all": "Click here to see all of my projects!"
@@ -78,6 +81,34 @@
             "content": "Explore my academic background, technical skills, and professional experiences in greater detail.",
             "download_resume": "Download Resume",
             "contact": "Get in Touch"
+        }
+    },
+    "contact": {
+        "title": "Let's build something together?",
+        "content": "I'm always open to new conversations about the tech world. If you have a project getting off the ground and are looking for a partnership, send me a message. Let's make it happen!",
+        "form": {
+            "title": "Send a Message",
+            "fields": {
+                "name": "Name",
+                "email": "Email",
+                "theme": {
+                    "label": "Theme",
+                    "opt1": "Question",
+                    "opt2": "Project Development",
+                    "opt3": "Professional Proposal"
+                },
+                "subject": "Subject",
+                "message": "Message",
+                "button": {
+                    "send": "Send",
+                    "sending": "Sending..."
+                }
+            }
+        },
+        "informations": {
+            "title": "Contact",
+            "email": "Email",
+            "social_networks": "Social Media"
         }
     }
 }
