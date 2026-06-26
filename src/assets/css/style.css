@@ -8,12 +8,16 @@
     src: url('../../assets/fonts/Montserrat-VariableFont_wght.woff2') format('woff2');
 }
 
+strong {
+    @apply font-semibold text-indigo-900 hover:text-indigo-600 transition-all duration-300
+}
+
 .navbar-item {
     @apply flex items-center px-4 transition-colors duration-300 hover:bg-neutral-200 hover:cursor-pointer
 }
 
 .menu-item {
-    @apply flex items-center px-4 py-2.5 text-sm font-medium tracking-tight text-neutral-600 hover:bg-neutral-200/50 hover:text-neutral-900 hover:cursor-pointer transition-all duration-200
+    @apply flex items-center px-4 py-2.5 text-sm font-medium capitalize tracking-tight text-neutral-600 hover:bg-neutral-200/50 hover:text-neutral-900 hover:cursor-pointer transition-all duration-200
 }
 
 .card {

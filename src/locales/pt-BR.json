@@ -1,0 +1,114 @@
+{
+    "nav": {
+        "about": "sobre",
+        "projects": "projetos",
+        "experiences": "experiências",
+        "contact": "contato",
+        "resume": "currículo",
+        "language": "idioma"
+    },
+    "footer": {
+        "development": "Desenvolvido com Vue.js e Tailwind CSS",
+        "catch-phrase": "Transformando ideias em soluções digitais eficientes e escaláveis."
+    },
+    "home": {
+        "hero": {
+            "presentation": "👋 Opa, prazer! Sou o",
+            "job-title": "Desenvolvedor Full-Stack"
+        },
+        "about": {
+            "title": "Sobre mim",
+            "paragraphs": {
+                "first": "Sou um Desenvolvedor Full-Stack em início de carreira, apaixonado pelo desenvolvimento e arquitetura de sistemas. Tenho grande interesse na criação de aplicações web eficientes, escaláveis e bem estruturadas, buscando constantemente aprimorar meus conhecimentos em desenvolvimento de software, boas práticas e novas tecnologias. Atualmente, estou concluindo o curso de Sistemas de Informação na <strong>Fundação Hermínio Ometto (FHO - Uniararas)</strong>, onde também conquistei o primeiro lugar na <strong>XVIII Maratona FHO de Programação (2023)</strong>.",
+                "second": "Profissionalmente, atuo como estagiário de desenvolvimento na <strong>ESL - Excelência em Sistemas Logísticos</strong>, trabalhando com Ruby on Rails no desenvolvimento de funcionalidades para sistemas TMS do setor logístico. Possuo experiência em Desenvolvimento Web Full-Stack, com conhecimentos sólidos em back-end utilizando Ruby e Python, além de experiência no desenvolvimento front-end com Vue.js para a criação de interfaces modernas, responsivas e profissionais.",
+                "third": "Embora eu esteja inserido nas tecnologias voltadas para a web, também tenho interesse e estudo continuamente áreas como Inteligência Artificial e Desenvolvimento Mobile. Fora do ambiente profissional, gosto de dedicar meu tempo a projetos pessoais, explorar novas tecnologias, ler contos de terror, fazer música e aproveitar momentos com família e amigos — experiências que contribuem para manter minha criatividade e curiosidade sempre ativas."
+            },
+            "skills": {
+                "title": "Habilidades",
+                "languages": "Linguagens",
+                "frameworks": "Frameworks",
+                "tools": "Ferramentas"
+            }
+        },
+        "projects": {
+            "title": "Projetos",
+            "first": {
+                "name": "API de Pesquisa Híbrida",
+                "description": "Protótipo de uma API RESTful para pesquisa híbrida de informações, utilizada no meu TCC (FHO, 2026). Utiliza de processos de geração de embeddings com modelos de encoding neurais, para similaridade semântica, e o Elasticsearch para indexação e como motor de busca híbrido (k-NN + BM-25)."
+            },
+            "second": {
+                "name": "Benchmark NLP",
+                "description": "Testes de eficiência e similaridade semântica de encoders disponíveis no HuggingFace."
+            },
+            "third": {
+                "name": "Calculadora BeeWatts",
+                "description": "Ferramenta para simular a economia e o investimento necessário para a instalação de energia solar com base no consumo do usuário."
+            },
+            "fourth": {
+                "name": "Gestão de Estoque",
+                "description": "Aplicação Full-stack para gestão de produtos, clientes e vendas com API RESTful integrada e interface dinâmica (AJAX/Fetch)."
+            },
+            "all": "Veja todos os meus projetos clicando aqui!"
+        },
+        "experiences": {
+            "title": "Experiências",
+            "first": {
+                "company": "ESL Sistemas",
+                "job_title": "Estagiário de Desenvolvimento Web",
+                "start_at": "2025",
+                "end_at": "Atual",                    
+                "topics": {
+                    "first": "Desenvolvimento e manutenção de funcionalidades para sistemas TMS, atendendo às demandas do setor de produtos e garantindo a entrega dentro dos prazos estabelecidos.",
+                    "second": "Identificação, análise e correção de falhas, contribuindo para a melhoria contínua e estabilidade dos sistemas corporativos com Ruby on Rails.",
+                    "third": "Participação ativa em equipes ágeis, colaborando em cerimônias como dailys, refinamentos e revisões técnicas.",
+                    "fourth": "Atendimento e suporte técnico a usuários finais, auxiliando na resolução de incidentes e contribuindo para a redução do tempo de indisponibilidade dos sistemas."
+                }
+            },
+            "second": {
+                "company": "Prefeitura Municipal de Artur Nogueira",
+                "job_title": "Estagiário de TI",
+                "start_at": "2023",
+                "end_at": "2025",  
+                "topics": {
+                    "first": "Atendimento e resolução de chamados internos, contribuindo para a redução de aproximadamente 20% no tempo médio de resolução de problemas e garantindo a estabilidade do ambiente computacional.",
+                    "second": "Realização de manutenção preventiva e corretiva em computadores e servidores, assegurando a disponibilidade da infraestrutura de TI.",
+                    "third": "Providência de suporte técnico especializado para usuários internos, solucionando problemas de software e conectividade para múltiplos departamentos."
+                }
+            }
+        },
+        "know_more": {
+            "title": "Quer saber mais",
+            "content": "Explore em detalhes a minha trajetória acadêmica, competências técnicas e experiências profissionais.",
+            "download_resume": "Baixar Currículo",
+            "contact": "Entre em Contato"
+        }
+    },
+    "contact": {
+        "title": "Vamos criar algo juntos?",
+        "content": "Estou sempre aberto a novas conversas sobre o mundo tech. Se você tem um projeto saindo do papel e busca parceria, me manda uma mensagem. Vamos fazer acontecer!",
+        "form": {
+            "title": "Envie uma Mensagem",
+            "fields": {
+                "name": "Nome",
+                "email": "E-mail",
+                "theme": {
+                    "label": "Tema",
+                    "opt1": "Dúvida",
+                    "opt2": "Desenvolvimento de Projeto",
+                    "opt3": "Proposta Profissional"
+                },
+                "subject": "Assunto",
+                "message": "Mensagem",
+                "button": {
+                    "send": "Enviar",
+                    "sending": "Enviando..."
+                }
+            }
+        },
+        "informations": {
+            "title": "Contato",
+            "email": "E-mail",
+            "social_networks": "Redes Sociais"
+        }
+    }
+}

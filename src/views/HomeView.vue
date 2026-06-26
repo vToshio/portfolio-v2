@@ -31,7 +31,7 @@ import pref_an_logo from '@/assets/images/pref-artur-nogueira.png'
 import { useIsMobile } from '@/lib/useIsMobile';
 import { downloadResume } from '@/services/exportResume';
 
-const { isMobile } = useIsMobile(1024);
+const { isMobile } = useIsMobile(714);
 </script>
 
 <template>
@@ -41,70 +41,101 @@ const { isMobile } = useIsMobile(1024);
     <div class="absolute z-20 mask-radial-from-5% mask-radial-to-90% bg-neutral-500/20 w-full h-full backdrop-blur-2xl"></div>
     <div class="absolute z-30 mask-radial-at-bottom mask-radial-from-5% mask-radial-to-60% bg-indigo-500/30 w-full h-full backdrop-blur-2xl"></div>
     <div class="absolute z-30 mask-radial-at-right mask-radial-from-5% mask-radial-to-60% bg-indigo-500/30 w-full h-full backdrop-blur-2xl"></div>
-    <div class="z-50 text-center mx-auto max-w-1/2">
+    <div class="z-50 text-center mx-auto xl:max-w-1/2">
       <div class="flex flex-col">
-        <span class="font-light text-2xl text-nowrap text-shadow-2xs text-shadow-neutral-500">👋Opa! Prazer, sou</span>
-        <h1 class="text-6xl font-bold my-3 italic tracking-tight text-shadow-2xs text-shadow-neutral-500">Vinícius Toshio</h1>
+        <span class="font-light text-base md:text-2xl text-nowrap text-shadow-2xs text-shadow-neutral-500">{{ $t('home.hero.presentation') }}</span>
+        <h1 class="text-5xl md:text-6xl font-bold my-3 italic tracking-tight text-shadow-2xs text-shadow-neutral-500">
+          Vinícius Toshio
+        </h1>
       </div>
-      <div class="flex items-center justify-center my-3 py-1.5 rounded-full bg-sky-500 shadow-xs shadow-neutral-500">
-        <span class="text-sm md:text-base font-medium tracking-tight">Desenvolvedor Full-Stack</span>
+      <div class="flex items-center justify-center my-3 py-1.5 rounded-full bg-sky-500 shadow-md shadow-neutral-700">
+        <span class="text-sm md:text-base font-medium tracking-tight">{{ $t('home.hero.job-title') }}</span>
       </div>
     </div>
   </section>
 
   <section id="about" class="max-w-6xl mx-auto mt-15 mb-20">
-    <h1 class="text-center text-4xl font-bold tracking-tight text-neutral-900">
+    <h1 class="text-center text-4xl capitalize font-bold tracking-tight text-neutral-900">
       <span class="text-indigo-500">1.</span> 
-      Sobre Mim
+      {{ $t('home.about.title') }}
     </h1>
     <hr class="mt-3 mb-8 mx-auto w-20 border-t-4 border-indigo-500 rounded-full">
 
     <div class="flex flex-col-reverse xl:flex-row justify-center w-full mt-10 gap-5">
       <div class="flex flex-col gap-2 text-justify px-5 mx-8 md:mx-auto md:max-w-3/4 xl:mx-0 xl:max-w-1/2">
-        <p class="text-base font-light">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet lacinia odio ut accumsan. Pellentesque convallis purus eget elit commodo auctor. Donec vestibulum eget nunc id bibendum. Suspendisse eu ligula erat. Vivamus fermentum purus urna, quis viverra nisi cursus in. Curabitur porttitor leo ut auctor suscipit. Vestibulum quis augue luctus ligula aliquet blandit. Aenean libero ipsum, mollis eget consectetur vel, consectetur ut urna. Vestibulum accumsan dignissim vestibulum. Pellentesque dapibus gravida augue quis viverra.
-        </p>
-        <p class="text-base font-light">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla imperdiet lacinia odio ut accumsan. Pellentesque convallis purus eget elit commodo auctor. Donec vestibulum eget nunc id bibendum. Suspendisse eu ligula erat. Vivamus fermentum purus urna, quis viverra nisi cursus in. Curabitur porttitor leo ut auctor suscipit. Vestibulum quis augue luctus ligula aliquet blandit. Aenean libero ipsum, mollis eget consectetur vel, consectetur ut urna. Vestibulum accumsan dignissim vestibulum. Pellentesque dapibus gravida augue quis viverra.
-        </p>
+        <p class="text-base font-light" v-html="$t('home.about.paragraphs.first')"></p>
+        <p class="text-base font-light" v-html="$t('home.about.paragraphs.second')"></p>
+        <p class="text-base font-light" v-html="$t('home.about.paragraphs.third')"></p>
       </div>
       <img class="w-100 mx-auto xl:mx-0 xl:max-w-1/2 rounded-xl" :src="placeholder" alt="">
     </div>
     
     <div class="mx-auto max-w-6xl px-6 pt-12">
-      <h2 class="text-center text-3xl font-bold tracking-tight text-neutral-900 mb-10">Habilidades</h2>
+      <h2 class="text-center text-3xl font-bold tracking-tight text-neutral-900 mb-10">{{ $t('home.about.skills.title') }}</h2>
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div class="card">
-          <h3 class="text-sm uppercase tracking-widest text-gray-500 font-bold mb-6">Linguagens</h3>
+          <h3 class="text-sm uppercase tracking-widest text-gray-500 font-bold mb-6">{{ $t('home.about.skills.languages') }}</h3>
           <div class="flex flex-wrap justify-center gap-6">
             <img class="skill-icon" :src="ruby" alt="Ruby">
+            <span class="sr-only">Ruby</span>
+
             <img class="skill-icon" :src="python" alt="Python">
+            <span class="sr-only">Python</span>
+
             <img class="skill-icon" :src="javascript" alt="JavaScript">
+            <span class="sr-only">JavaScript</span>
           </div>
         </div>
 
         <div class="card">
-          <h3 class="text-sm uppercase tracking-widest text-gray-500 font-bold mb-6">Frameworks</h3>
+          <h3 class="text-sm uppercase tracking-widest text-gray-500 font-bold mb-6">{{ $t('home.about.skills.frameworks') }}</h3>
           <div class="flex flex-wrap justify-center gap-6">
             <img class="skill-icon" :src="rails" alt="Rails">
+            <span class="sr-only">Ruby on Rails</span>
+
             <img class="skill-icon" :src="flask" alt="Flask">
+            <span class="sr-only">Flask</span>
+
             <img class="skill-icon" :src="fastapi" alt="FastAPI">
+            <span class="sr-only">FastAPI</span>
+
             <img class="skill-icon" :src="vuejs" alt="Vue.js">
+            <span class="sr-only">Vue.js</span>
+
             <img class="skill-icon" :src="tailwind" alt="TailwindCSS">
+            <span class="sr-only">TailwindCSS</span>
           </div>
         </div>
 
         <div class="card">
-          <h3 class="text-sm uppercase tracking-widest text-gray-500 font-bold mb-6">Ferramentas</h3>
+          <h3 class="text-sm uppercase tracking-widest text-gray-500 font-bold mb-6">{{ $t('home.about.skills.tools') }}</h3>
           <div class="flex flex-wrap justify-center gap-6">
             <img class="skill-icon" :src="vscode" alt="VS Code">
+            <span class="sr-only">VSCode</span>
+
             <img class="skill-icon" :src="postman" alt="Postman">
+            <span class="sr-only">Postman</span>
+
             <img class="skill-icon" :src="docker" alt="Docker">
-            <img class="skill-icon" :src="github" alt="GitHub">
+            <span class="sr-only">Docker</span>
+            
             <img class="skill-icon" :src="git" alt="Git">
+            <span class="sr-only">Git</span>
+            
+            <img class="skill-icon" :src="github" alt="GitHub">
+            <span class="sr-only">Github</span>
+            
             <img class="skill-icon" :src="fedora" alt="Fedora">
+            <span class="sr-only">Fedora</span>
+            <span class="sr-only">Linux</span>
+            <span class="sr-only">Ubuntu</span>
+
             <img class="skill-icon" :src="ai" alt="Inteligência Artificial">
+            <span class="sr-only">AI</span>
+            <span class="sr-only">IA</span>
+            <span class="sr-only">Artificial Intelligence</span>
+            <span class="sr-only">Inteligência Artificial</span>
           </div>
         </div>
       </div>
@@ -112,69 +143,69 @@ const { isMobile } = useIsMobile(1024);
   </section>
 
   <section id="projects" class="max-w-6xl mx-auto mt-15 mb-20">
-    <h1 class="text-center text-4xl font-bold tracking-tight text-neutral-900">
+    <h1 class="text-center text-4xl capitalize font-bold tracking-tight text-neutral-900">
       <span class="text-indigo-500">2.</span> 
-      Projetos
+      {{ $t('home.projects.title') }}
     </h1>
     <hr class="mt-3 mb-8 mx-auto w-20 border-t-4 border-indigo-500 rounded-full">
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 w-full px-5 group/opaque">
-      <ProjectCard class="col-span-1 lg:col-span-2 hover:opacity-100 hover:scale-101 group-hover/opaque:opacity-50"
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 w-full px-5 group/opaque">
+      <ProjectCard class="col-span-1 md:col-span-2 hover:opacity-100 hover:scale-101 group-hover/opaque:opacity-50"
                    :year="2026"
-                   :project_name="'API de Pesquisa Híbrida'"
-                   :project_description="'Protótipo de uma API RESTful para pesquisa híbrida de informações, utilizada no meu TCC (FHO, 2026). Utiliza de processos de geração de embeddings com modelos de encoding neurais, para similaridade semântica, e o Elasticsearch para indexação e como motor de busca híbrido (k-NN + BM-25).'"
-                   :tags="['Python', 'FastAPI', 'API RESTful', 'Transformers', 'Elasticsearch']"
+                   :project_name="$t('home.projects.first.name')"
+                   :project_description="$t('home.projects.first.description')"
+                   :tags="['Python', 'FastAPI', 'RESTful API', 'Transformers', 'Elasticsearch']"
                    :github_url="'https://github.com/vToshio/hybrid-search-api'"/>
       <ProjectCard class="col-span-1 hover:opacity-100 group-hover/opaque:opacity-50 hover:scale-101"
                    :year="2026"
-                   :project_name="'Benchmark NLP'"
-                   :project_description="'Testes de eficiência e similaridade semântica de encoders disponíveis no HuggingFace.'"
+                   :project_name="$t('home.projects.second.name')"
+                   :project_description="$t('home.projects.second.description')"
                    :tags="['Python', 'Transformers', 'NLP']"
                    :github_url="'https://github.com/vToshio/hf-embeddings-models'"/>
       <ProjectCard class="col-span-1 hover:opacity-100 group-hover/opaque:opacity-50 hover:scale-101"
                    :year="2025"
-                   :project_name="'Calculadora Beewatts'"
-                   :project_description="'Ferramenta para simular a economia e o investimento necessário para a instalação de energia solar com base no consumo do usuário.'"
+                   :project_name="$t('home.projects.third.name')"
+                   :project_description="$t('home.projects.third.description')"
                    :tags="['Python', 'Django', 'JavaScript', 'Bootstrap']"
                    :github_url="'https://github.com/vToshio/beewatts'"/>
       <ProjectCard class="col-span-1 hover:opacity-100 group-hover/opaque:opacity-50 hover:scale-101"
                    :year="2024"
-                   :project_name="'Gestão de Estoque'"
-                   :project_description="'Aplicação Full-stack para gestão de produtos, clientes e vendas com API RESTful integrada e interface dinâmica (AJAX/Fetch).'"
+                   :project_name="$t('home.projects.fourth.name')"
+                   :project_description="$t('home.projects.fourth.description')"
                    :tags="['Python', 'Flask', 'JavaScript', 'Bootstrap']"
                    :github_url="'https://github.com/vToshio/sistema-inventario-flask'"/>
       <AllProjectCard class="hover:opacity-100 group-hover/opaque:opacity-50 hover:scale-101" />
     </div>
 
     <div id="experiences" class="max-w-6xl mx-auto mt-15 mb-20">
-      <h1 class="text-center text-4xl font-bold tracking-tight text-neutral-900">
+      <h1 class="text-center text-4xl capitalize font-bold tracking-tight text-neutral-900">
         <span class="text-indigo-500">3.</span> 
-        Experiências
+        {{ $t('home.experiences.title') }}
       </h1>
       <hr class="mt-3 mb-8 mx-auto w-20 border-t-4 border-indigo-500 rounded-full">
 
       <div class="flex flex-col gap-15">
-        <ExperienceCard :company="'ESL Sistemas'" :logo="esl_logo"
+        <ExperienceCard :company="$t('home.experiences.first.company')" :logo="esl_logo"
                         :website_url="'https://www.eslsistemas.com.br'"
-                        :job_title="'Estagiário de Desenvolvimento Web'"
+                        :job_title="$t('home.experiences.first.job_title')"
                         :topics="[
-                          'Atuação no suporte técnico especializado níveis N1 e N2, solucionando incidentes diários e assegurando o cumprimento de acordos de nível de serviço (SLA).',
-                          'Desenvolvimento de funcionalidades para sistemas logísticos utilizando Ruby on Rails, com foco na aplicação de padrões de projeto e desenvolvimento da empresa e em conformidade com requisitos fiscais e de negócio.',
-                          'Otimização de 20% no tempo de entrega de demandas através da implementação de processos de Behavior-Driven Development (BDD).',
-                          'Gestão de fluxo de trabalho utilizando Kanban e colaboração ativa em cerimônias ágeis, contribuindo para o refinamento técnico de requisitos.',
+                          $t('home.experiences.first.topics.first'),
+                          $t('home.experiences.first.topics.second'),
+                          $t('home.experiences.first.topics.third'),
+                          $t('home.experiences.first.topics.fourth')
                         ]"
                         :skills="['Ruby on Rails', 'VueJS', 'REST/RESTful', 'GraphQL']"
-                        :start="'2025'" :end="'Atual'" />
-        <ExperienceCard :company="'Prefeitura Municipal de Artur Nogueira'" :logo="pref_an_logo"
+                        :start="$t('home.experiences.first.start_at')" :end="$t('home.experiences.first.end_at')" />
+        <ExperienceCard :company="$t('home.experiences.second.company')" :logo="pref_an_logo"
                         :website_url="'https://arturnogueira.sp.gov.br/site/'"
-                        :job_title="'Estagiário de TI'"
+                        :job_title="$t('home.experiences.second.job_title')"
                         :skills="['PowerShell', 'Bash', 'Python']"
                         :topics="[
-                          'Automatização de tarefas operacionais recorrentes por meio de scripts em PowerShell e Bash, reduzindo o esforço manual da equipe e aumentando a produtividade.',
-                          'Manutenção preventiva e corretiva de infraestrutura de rede e hardware, garantindo a continuidade e estabilidade dos serviços públicos municipais.',
-                          'Providência de suporte técnico especializado para usuários internos, solucionando problemas de software e conectividade para múltiplos departamentos.'
+                          $t('home.experiences.second.topics.first'),
+                          $t('home.experiences.second.topics.second'),
+                          $t('home.experiences.second.topics.third')
                         ]"
-                        :start="'2023'" :end="'2025'" />
+                        :start="$t('home.experiences.second.start_at')" :end="$t('home.experiences.second.end_at')" />
       </div>
     </div>
 
@@ -182,20 +213,20 @@ const { isMobile } = useIsMobile(1024);
       <div class="group border border-zinc-100 rounded-2xl shadow-sm hover:shadow-md transition-all">
         <div class="flex flex-row text-left px-8 md:px-12">
           <div class="space-y-3 w-full sm:w-1/2 py-15">
-            <h1 class="text-4xl font-bold tracking-tight">
-              Quer saber mais<span class="text-indigo-500">?</span>
+            <h1 class="text-3xl md:text-4xl font-bold tracking-tight">
+              {{ $t('home.know_more.title') }}<span class="text-indigo-500">?</span>
             </h1>
             <p class="text-base text-neutral-500 font-light">
-              Explore em detalhes a minha trajetória acadêmica, competências técnicas e experiências profissionais.
+              {{ $t('home.know_more.content') }}
             </p>
 
-            <div class="flex gap-5 pt-2">
+            <div class="flex flex-col sm:flex-row gap-5 pt-2">
               <button @click="downloadResume()" class="btn-indigo btn-sm">
-                Baixar Currículo
+                {{ $t('home.know_more.download_resume') }}
               </button>
 
-              <RouterLink :to="{ path: '/contact'}" class="btn btn-sm">
-                Entre em Contato
+              <RouterLink :to="{ path: '/contact'}" class="btn btn-sm text-center">
+                {{ $t('home.know_more.contact') }}
               </RouterLink>
             </div>
           </div>
