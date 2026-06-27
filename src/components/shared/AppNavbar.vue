@@ -9,12 +9,12 @@ import { useIsMobile } from '@/lib/useIsMobile';
 import { downloadResume } from '@/services/exportResume.js';
 import { toggleLanguage } from '@/lib/useLocale.js';
 
-const { isMobile } = useIsMobile(768);
+const { isMobile } = useIsMobile(835);
 </script>
 
 <template>
     <header class="fixed top-0 z-100 w-full bg-neutral-100/80 backdrop-blur-md shadow-md shadow-neutral-200">
-        <nav class="flex mx-auto justify-between md:justify-around items-stretch">
+        <nav class="flex mx-auto justify-between lg:justify-around items-stretch">
             <RouterLink :to="{ path: '/', hash: '#hero' }" class="hover:cursor-pointer">
                 <img class="w-35 py-4 px-4 md:px-2" :src="logo" alt="Logo Vinícius Toshio">
             </RouterLink>

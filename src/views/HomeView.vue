@@ -62,7 +62,7 @@ const { isMobile } = useIsMobile(714);
     <hr class="mt-3 mb-8 mx-auto w-20 border-t-4 border-indigo-500 rounded-full">
 
     <div class="flex flex-col-reverse lg:flex-row justify-center w-full mt-10 gap-5 h-fit">
-      <div class="flex flex-col gap-2 text-justify px-5 mx-8 md:mx-auto md:max-w-3/4 lg:mx-0 lg:max-w-1/2">
+      <div class="flex flex-col gap-3 text-justify px-5 mx-8 md:mx-auto md:max-w-3/4 lg:mx-0 lg:max-w-1/2">
         <p class="text-base font-light" v-html="$t('home.about.paragraphs.first')"></p>
         <p class="text-base font-light" v-html="$t('home.about.paragraphs.second')"></p>
         <p class="text-base font-light" v-html="$t('home.about.paragraphs.third')"></p>
