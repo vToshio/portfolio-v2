@@ -1,16 +1,20 @@
 import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
-const DEFAULT_LOCALE = 'pt-br'
-const supportedLocales = ['pt-br', 'en-us']
+import {
+    DEFAULT_LOCALE,
+    getNextLocale,
+    isSupportedLocale,
+    normalizeLocale
+} from '@/config/locales'
 
 export const useLocale = () => {
     const route = useRoute()
     const router = useRouter()
 
     const locale = computed(() => {
-        const routeLocale = String(route.params.locale || '').toLowerCase()
-        return supportedLocales.includes(routeLocale) ? routeLocale : DEFAULT_LOCALE
+        const routeLocale = normalizeLocale(route.params.locale)
+        return isSupportedLocale(routeLocale) ? routeLocale : DEFAULT_LOCALE
     })
 
     const localizedRoute = (name, hash) => ({
@@ -20,11 +24,9 @@ export const useLocale = () => {
     })
 
     const toggleLanguage = () => {
-        const targetLocale = locale.value === 'pt-br' ? 'en-us' : 'pt-br'
-
         return router.push({
             name: route.name || 'home',
-            params: { ...route.params, locale: targetLocale },
+            params: { ...route.params, locale: getNextLocale(locale.value) },
             query: route.query,
             hash: route.hash
         })
