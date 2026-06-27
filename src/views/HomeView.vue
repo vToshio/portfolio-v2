@@ -231,7 +231,7 @@ const { isMobile } = useIsMobile(714);
                 {{ $t('home.know_more.download_resume') }}
               </button>
 
-              <RouterLink :to="{ path: '/contact'}" class="btn btn-sm text-center">
+              <RouterLink :to="{ name: 'contact', params: { locale: $route.params.locale } }" class="btn btn-sm text-center">
                 {{ $t('home.know_more.contact') }}
               </RouterLink>
             </div>

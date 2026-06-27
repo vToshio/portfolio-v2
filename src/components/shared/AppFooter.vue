@@ -1,6 +1,9 @@
 <script setup>
 import github from '@/assets/svg/gh-icon.svg';
 import linkedin_icon from '@/assets/svg/linkedin-icon.svg';
+import { useLocale } from '@/lib/useLocale';
+
+const { localizedRoute } = useLocale();
 </script>
 
 <template>
@@ -16,16 +19,16 @@ import linkedin_icon from '@/assets/svg/linkedin-icon.svg';
       </div>
 
       <nav class="flex flex-wrap justify-center gap-8 text-[11px] uppercase tracking-[0.2em] font-bold">
-        <RouterLink :to="{ path: '/', hash: '#about' }" class="hover:text-indigo-500 transition-colors">
+        <RouterLink :to="localizedRoute('home', '#about')" class="hover:text-indigo-500 transition-colors">
             {{ $t('nav.about') }}
         </RouterLink>
-        <RouterLink :to="{ path: '/', hash: '#projects' }" class="hover:text-indigo-500 transition-colors">
+        <RouterLink :to="localizedRoute('home', '#projects')" class="hover:text-indigo-500 transition-colors">
             {{ $t('nav.projects') }}
         </RouterLink>
-        <RouterLink :to="{ path: '/', hash: '#experiences' }" class="hover:text-indigo-500 transition-colors">
+        <RouterLink :to="localizedRoute('home', '#experiences')" class="hover:text-indigo-500 transition-colors">
             {{ $t('nav.experiences') }}
         </RouterLink  >
-        <RouterLink to="/contact" rel="noopenner noreferren" target="_blank" class="hover:text-indigo-500 transition-colors">
+        <RouterLink :to="localizedRoute('contact')" class="hover:text-indigo-500 transition-colors">
             {{ $t('nav.contact') }}
         </RouterLink>
       </nav>

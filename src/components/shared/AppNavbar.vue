@@ -7,30 +7,31 @@ import translationIcon from '@/assets/svg/translation-icon.svg';
 
 import { useIsMobile } from '@/lib/useIsMobile';
 import { downloadResume } from '@/services/exportResume.js';
-import { toggleLanguage } from '@/lib/useLocale.js';
+import { useLocale } from '@/lib/useLocale.js';
 
 const { isMobile } = useIsMobile(835);
+const { localizedRoute, toggleLanguage } = useLocale();
 </script>
 
 <template>
     <header class="fixed top-0 z-100 w-full bg-neutral-100/80 backdrop-blur-md shadow-md shadow-neutral-200">
-        <nav class="flex mx-auto justify-between lg:justify-around items-stretch">
-            <RouterLink :to="{ path: '/', hash: '#hero' }" class="hover:cursor-pointer">
+        <nav class="flex mx-auto justify-between md:justify-around items-stretch">
+            <RouterLink :to="localizedRoute('home', '#hero')" class="hover:cursor-pointer">
                 <img class="w-35 py-4 px-4 md:px-2" :src="logo" alt="Logo Vinícius Toshio">
             </RouterLink>
             
             <div v-if="!isMobile" class="flex items-stretch gap-3">
                 <ul class="flex items-stretch text-base font-light text-shadow-2xs">
-                    <RouterLink :to="{ path: '/', hash: '#about' }" class="navbar-item">
+                    <RouterLink :to="localizedRoute('home', '#about')" class="navbar-item">
                         {{ $t('nav.about') }}
                     </RouterLink>
-                    <RouterLink :to="{ path: '/', hash: '#projects' }" class="navbar-item">
+                    <RouterLink :to="localizedRoute('home', '#projects')" class="navbar-item">
                         {{ $t('nav.projects') }}
                     </RouterLink>
-                    <RouterLink :to="{ path: '/', hash: '#experiences' }" class="navbar-item">
+                    <RouterLink :to="localizedRoute('home', '#experiences')" class="navbar-item">
                         {{ $t('nav.experiences') }}
                     </RouterLink>
-                    <RouterLink to="/contact" class="navbar-item">
+                    <RouterLink :to="localizedRoute('contact')" class="navbar-item">
                         {{ $t('nav.contact') }}
                     </RouterLink>
                     <li @click="downloadResume()" class="navbar-item">

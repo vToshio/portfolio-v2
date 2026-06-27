@@ -5,8 +5,8 @@ import enUS from '@/locales/en-US.json'
 
 const i18n = createI18n({
     legacy: false,
-    locale: localStorage.getItem('locale') || 'pt-BR',
-    fallback_locale: 'pt-BR',
+    locale: 'pt-BR',
+    fallbackLocale: 'pt-BR',
     messages: { 
         'pt-BR': ptBR,
         'en-US': enUS
