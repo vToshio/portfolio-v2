@@ -3,7 +3,7 @@ import ProjectCard from '@/components/projects/ProjectCard.vue';
 import AllProjectCard from '@/components/projects/AllProjectCard.vue';
 import ExperienceCard from '@/components/experiences/ExperienceCard.vue';
 
-import placeholder from '@/assets/images/photo-placeholder.png';
+import photo from '@/assets/images/foto-apresentacao.jpg';
 
 import python from '@/assets/svg/languages/python.svg';
 import javascript from '@/assets/svg/languages/javascript.svg';
@@ -61,13 +61,19 @@ const { isMobile } = useIsMobile(714);
     </h1>
     <hr class="mt-3 mb-8 mx-auto w-20 border-t-4 border-indigo-500 rounded-full">
 
-    <div class="flex flex-col-reverse xl:flex-row justify-center w-full mt-10 gap-5">
-      <div class="flex flex-col gap-2 text-justify px-5 mx-8 md:mx-auto md:max-w-3/4 xl:mx-0 xl:max-w-1/2">
+    <div class="flex flex-col-reverse lg:flex-row justify-center w-full mt-10 gap-5 h-fit">
+      <div class="flex flex-col gap-2 text-justify px-5 mx-8 md:mx-auto md:max-w-3/4 lg:mx-0 lg:max-w-1/2">
         <p class="text-base font-light" v-html="$t('home.about.paragraphs.first')"></p>
         <p class="text-base font-light" v-html="$t('home.about.paragraphs.second')"></p>
         <p class="text-base font-light" v-html="$t('home.about.paragraphs.third')"></p>
       </div>
-      <img class="w-100 mx-auto xl:mx-0 xl:max-w-1/2 rounded-xl" :src="placeholder" alt="">
+      <div class="group/photo mx-auto w-[min(80vw,20rem)] aspect-3/4 shrink-0 overflow-hidden rounded-xl shadow-xl shadow-neutral-500/30 md:w-88 lg:mx-0 lg:w-96">
+        <img
+          class="size-full object-cover object-center transition-transform duration-500 ease-out group-hover/photo:scale-110"
+          :src="photo"
+          alt="Foto de apresentação de Vinícius Toshio"
+        >
+      </div>
     </div>
     
     <div class="mx-auto max-w-6xl px-6 pt-12">
