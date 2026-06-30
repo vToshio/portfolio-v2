@@ -10,7 +10,7 @@ import { useLocale } from '@/lib/useLocale';
 
 const clicked = ref(false)
 const menuRef = ref(null)
-const { localizedRoute, toggleLanguage } = useLocale()
+const { locale, localizedRoute, toggleLanguage } = useLocale()
 
 const handleClickOutside = (e) => {
     if (menuRef.value && !menuRef.value.contains(e.target)) {
@@ -44,7 +44,7 @@ onBeforeUnmount(() => document.removeEventListener('click', handleClickOutside))
                     <RouterLink :to="localizedRoute('contact')" class="menu-item">
                         {{ $t('nav.contact') }}
                     </RouterLink>
-                    <li @click="downloadResume()" class="menu-item">
+                    <li @click="downloadResume(locale)" class="menu-item">
                         {{ $t('nav.resume') }}
                     </li>
                     

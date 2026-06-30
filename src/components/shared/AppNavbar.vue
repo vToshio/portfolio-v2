@@ -10,7 +10,7 @@ import { downloadResume } from '@/services/exportResume.js';
 import { useLocale } from '@/lib/useLocale.js';
 
 const { isMobile } = useIsMobile(835);
-const { localizedRoute, toggleLanguage } = useLocale();
+const { locale, localizedRoute, toggleLanguage } = useLocale();
 </script>
 
 <template>
@@ -34,7 +34,7 @@ const { localizedRoute, toggleLanguage } = useLocale();
                     <RouterLink :to="localizedRoute('contact')" class="navbar-item">
                         {{ $t('nav.contact') }}
                     </RouterLink>
-                    <li @click="downloadResume()" class="navbar-item">
+                    <li @click="downloadResume(locale)" class="navbar-item">
                         {{ $t('nav.resume') }}
                     </li>
                 </ul>
