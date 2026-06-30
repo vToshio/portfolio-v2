@@ -29,9 +29,11 @@ import esl_logo from '@/assets/images/esl-color.png'
 import pref_an_logo from '@/assets/images/pref-artur-nogueira.png'
 
 import { useIsMobile } from '@/lib/useIsMobile';
+import { useLocale } from '@/lib/useLocale';
 import { downloadResume } from '@/services/exportResume';
 
 const { isMobile } = useIsMobile(714);
+const { locale } = useLocale();
 </script>
 
 <template>
@@ -227,11 +229,11 @@ const { isMobile } = useIsMobile(714);
             </p>
 
             <div class="flex flex-col sm:flex-row gap-5 pt-2">
-              <button @click="downloadResume()" class="btn-indigo btn-sm">
+              <button @click="downloadResume(locale)" class="btn-indigo btn-sm">
                 {{ $t('home.know_more.download_resume') }}
               </button>
 
-              <RouterLink :to="{ path: '/contact'}" class="btn btn-sm text-center">
+              <RouterLink :to="{ name: 'contact', params: { locale: $route.params.locale } }" class="btn btn-sm text-center">
                 {{ $t('home.know_more.contact') }}
               </RouterLink>
             </div>

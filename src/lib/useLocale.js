@@ -1,19 +1,36 @@
-import i18n from '@/i18n'
+import { computed } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 
-export const changeLanguage = (lang) => {
-    i18n.global.locale.value = lang
-    localStorage.setItem('locale', lang)
-}
+import {
+    DEFAULT_LOCALE,
+    getNextLocale,
+    isSupportedLocale,
+    normalizeLocale
+} from '@/config/locales'
 
-export const toggleLanguage = () => {
-    const newLocale =
-        i18n.global.locale.value === 'pt-BR'
-            ? 'en-US'
-            : 'pt-BR'
+export const useLocale = () => {
+    const route = useRoute()
+    const router = useRouter()
 
-    changeLanguage(newLocale)
-}
+    const locale = computed(() => {
+        const routeLocale = normalizeLocale(route.params.locale)
+        return isSupportedLocale(routeLocale) ? routeLocale : DEFAULT_LOCALE
+    })
 
-export const getCurrentLanguage = () => {
-    return i18n.global.locale.value
+    const localizedRoute = (name, hash) => ({
+        name,
+        params: { locale: locale.value },
+        ...(hash ? { hash } : {})
+    })
+
+    const toggleLanguage = () => {
+        return router.push({
+            name: route.name || 'home',
+            params: { ...route.params, locale: getNextLocale(locale.value) },
+            query: route.query,
+            hash: route.hash
+        })
+    }
+
+    return { locale, localizedRoute, toggleLanguage }
 }
