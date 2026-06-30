@@ -1,5 +1,5 @@
 <script setup>
-import logo from '@/assets/svg/logoipsum.svg';
+import logo from '@/assets/images/logo.png';
 import gh_icon from '@/assets/svg/gh-icon.svg';
 import linkedin_icon from '@/assets/svg/linkedin-icon.svg';
 import MenuButton from '../reactive/MenuButton.vue';
@@ -16,8 +16,15 @@ const { locale, localizedRoute, toggleLanguage } = useLocale();
 <template>
     <header class="fixed top-0 z-100 w-full bg-neutral-100/80 backdrop-blur-md shadow-md shadow-neutral-200">
         <nav class="flex mx-auto justify-between md:justify-around items-stretch">
-            <RouterLink :to="localizedRoute('home', '#hero')" class="hover:cursor-pointer">
-                <img class="w-35 py-4 px-4 md:px-2" :src="logo" alt="Logo Vinícius Toshio">
+            <RouterLink :to="localizedRoute('home', '#hero')" class="group hover:cursor-pointer">
+                <div class="flex py-5 text-2xl italic font-extrabold group-hover:scale-105 transition-all">
+                    <span class="text-indigo-700 group-hover:text-indigo-500 transition-all">v</span>
+                    <span class="group-hover:text-neutral-700 transition-all">Toshio</span>
+                    <span class="text-indigo-700 group-hover:text-indigo-500 transition-all">.</span>
+                </div>
+                <!-- 
+                <img class="scale-200 w-35 py-7 px-5 md:px-2" :src="logo" alt="Logo Vinícius Toshio">
+                -->
             </RouterLink>
             
             <div v-if="!isMobile" class="flex items-stretch gap-3">
